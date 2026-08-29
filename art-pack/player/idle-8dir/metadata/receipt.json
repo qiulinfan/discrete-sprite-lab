@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "job_id": "player-black-haired-girl-idle-8dir-turnaround-continuity-64-v8",
+  "status": "prototype-awaiting-art-direction-approval",
+  "created_at": "2026-08-28",
+  "pipeline": {
+    "skill": "create-topdown-8dir-sprites-v2",
+    "generation_tool": "built-in ImageGen",
+    "processing_tool": "create-topdown-8dir-sprites.build 2.0.0",
+    "perfect_pixel": "perfect-pixel==0.1.4",
+    "disabled_skill": "create-2d-game-art"
+  },
+  "generation": {
+    "south_master": "Reused approved v6 transparent high-detail south and approved v6 pseudo-pixel south.",
+    "cardinal_order": [
+      "north",
+      "east",
+      "west"
+    ],
+    "diagonal_references": {
+      "northeast": [
+        "south-master",
+        "north",
+        "east"
+      ],
+      "southeast": [
+        "south-master",
+        "east"
+      ],
+      "southwest": [
+        "south-master",
+        "west"
+      ],
+      "northwest": [
+        "south-master",
+        "north",
+        "west"
+      ]
+    },
+    "landmark_card": "ArtSource/2D/Player/player-black-haired-girl-idle-8dir-turnaround-continuity-64-v8/source/guides/turnaround-anchor-card.png",
+    "high_detail_normalization": {
+      "mode": "pre-pixel uniform scale plus translation",
+      "target_visible_height_px": 989,
+      "target_axis_x": 627,
+      "target_bottom": 1104,
+      "evidence": "ArtSource/2D/Player/player-black-haired-girl-idle-8dir-turnaround-continuity-64-v8/evidence/high-detail-normalization.json"
+    },
+    "rejected_source": {
+      "path": "ArtSource/2D/Player/player-black-haired-girl-idle-8dir-turnaround-continuity-64-v8/source/rejected/east-pseudo-small-v1.png",
+      "reason": "The source was about 956 visible pixels tall and could recover only 50 or 54 logical pixels at adjacent integer grids.",
+      "replacement": "East was regenerated at the south master's approximately 1050-pixel pseudo-source height."
+    }
+  },
+  "processing": {
+    "direction_order": [
+      "north",
+      "northeast",
+      "east",
+      "southeast",
+      "south",
+      "southwest",
+      "west",
+      "northwest"
+    ],
+    "requested_integer_grids": [
+      64,
+      69,
+      64,
+      66,
+      64,
+      64,
+      65,
+      64
+    ],
+    "sample_method": "majority",
+    "refine_intensity": 0,
+    "post_recovery_resampling": false,
+    "frame_size_px": [
+      64,
+      64
+    ],
+    "target_visible_height_px": 52,
+    "height_tolerance_px": 1,
+    "target_bottom_exclusive_y": 61,
+    "foot_axis_target_x": 31.5,
+    "head_foot_axis_offset_spread_limit_px": 2.5,
+    "palette_reference": "south",
+    "palette_mode": "canonical-reference-oklab-medoid",
+    "palette_colors": 32,
+    "alpha": "binary"
+  },
+  "automated_checks": {
+    "verdict": "pass",
+    "visible_heights_px": [
+      51,
+      53,
+      52,
+      52,
+      52,
+      51,
+      51,
+      52
+    ],
+    "visible_height_spread_px": 2,
+    "max_foot_axis_dx": 0.5,
+    "max_adjacent_head_anchor_dx": 1.1888797279192005,
+    "max_adjacent_torso_anchor_dx": 0.9993291305334395,
+    "head_foot_axis_offset_spread_px": 2.5,
+    "max_adjacent_palette_total_variation": 0.3449282615949283,
+    "visible_palette_colors": 32,
+    "partially_transparent_pixels": 0,
+    "audit": "ArtSource/2D/Player/player-black-haired-girl-idle-8dir-turnaround-continuity-64-v8/generated/player-black-haired-girl-idle-8dir-64-v8-audit.json"
+  },
+  "outputs": {
+    "sheet": {
+      "path": "ArtSource/2D/Player/player-black-haired-girl-idle-8dir-turnaround-continuity-64-v8/generated/player-black-haired-girl-idle-8dir-64-v8.png",
+      "sha256": "b0ba5df64e7ed5882917e91a8ceaa0b071556f03bec2eb80b5a1e20145cb7c00"
+    },
+    "manifest": {
+      "path": "ArtSource/2D/Player/player-black-haired-girl-idle-8dir-turnaround-continuity-64-v8/generated/player-black-haired-girl-idle-8dir-64-v8.json",
+      "sha256": "b93e6e226df3f81d1a9aebca3f22cf711c3746f6f72406166f0b4ead5cd240ea"
+    },
+    "rotation_gif": {
+      "path": "ArtSource/2D/Player/player-black-haired-girl-idle-8dir-turnaround-continuity-64-v8/evidence/player-black-haired-girl-idle-8dir-64-v8-rotation.gif",
+      "sha256": "25d9095f97d821f26cd41c7160a829a5d6eb3b6eac4033c321c8aebd16d6601f"
+    },
+    "continuity_guides": {
+      "path": "ArtSource/2D/Player/player-black-haired-girl-idle-8dir-turnaround-continuity-64-v8/evidence/player-black-haired-girl-idle-8dir-64-v8-continuity-guides.png",
+      "sha256": "98f1c846ee782b5d65f5f85a141d14a48c2248a83c5c610f52da23e501608b47"
+    },
+    "v7_v8_comparison": {
+      "path": "ArtSource/2D/Player/player-black-haired-girl-idle-8dir-turnaround-continuity-64-v8/evidence/v7-vs-v8-contact.png",
+      "sha256": "1b089a4613db82f8892fca1a3f79f31c3d203e9383c99e7c320ebfa69d641f59"
+    }
+  },
+  "gold_copies": {
+    "sha256": "25d9095f97d821f26cd41c7160a829a5d6eb3b6eac4033c321c8aebd16d6601f",
+    "repository": "production/art-gold/player-black-haired-girl-idle-8dir-64-v8-gold.gif",
+    "desktop": "source-workspace://Village_Rim-player-black-haired-girl-idle-8dir-64-v8-GOLD.gif"
+  },
+  "visual_review": {
+    "improvements": [
+      "Southeast now reads as a real front three-quarter view rather than frontal.",
+      "Northeast and northwest read as rear three-quarter views constrained by adjacent cardinals.",
+      "Foot rotation axes remain aligned while head and torso transition smoothly around the circle.",
+      "All frames use the approved south-view palette authority rather than an eight-view palette vote."
+    ],
+    "remaining_risks": [
+      "The 2.5-pixel head-to-foot offset spread intentionally preserves natural profile head projection and should receive user visual approval.",
+      "The set has not been imported or evaluated at gameplay scale in Unity."
+    ]
+  },
+  "approval_boundary": "Do not copy the prototype into Assets/Art/2D until the user approves the v8 rotation."
+}

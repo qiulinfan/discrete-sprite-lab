@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "tool": "village-rim.perfect-pixel-character-pipeline",
+  "tool_version": "1.0.0",
+  "verdict": "pass",
+  "artifact": {
+    "sheet_sha256": "4093c9ea9712b6e8768ff107ee8e3fe8beaaaf604bcf0eff5141979f7ab19f7a",
+    "manifest_sha256": "e71d6c124e5dac40ab04ed29d63eeb29774b0b4cb7a45d08934746efd24d8bd5"
+  },
+  "checks": {
+    "sheet_size_256x128": true,
+    "frame_count_8": true,
+    "binary_alpha": true,
+    "palette_at_most_requested": true,
+    "all_frames_nonempty": true,
+    "all_frames_64x64": true,
+    "all_contacts_match": true,
+    "all_heights_match": true,
+    "perfect_pixel_refined_sizes_bounded": true
+  },
+  "facts": {
+    "visible_palette_colors": 32,
+    "fully_transparent_pixels": 27368,
+    "fully_opaque_pixels": 5400,
+    "partially_transparent_pixels": 0
+  }
+}

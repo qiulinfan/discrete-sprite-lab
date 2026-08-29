@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "job_id": "player-black-haired-girl-idle-8dir-turnaround-continuity-64-v8",
+  "status": "prototype-awaiting-art-direction-approval",
+  "pipeline": "create-topdown-8dir-sprites-v2",
+  "disabled_route": "create-2d-game-art",
+  "master": {
+    "direction": "south",
+    "source": "source/high-detail/south.png",
+    "provenance": "Reused approved v6 high-detail transparent south view",
+    "canvas_px": [
+      1254,
+      1254
+    ],
+    "alpha_bbox": [
+      403,
+      115,
+      843,
+      1104
+    ],
+    "rotation_axis_x": 627,
+    "landmark_y": {
+      "head_top": 115,
+      "eye_line": 370,
+      "shoulder_line": 485,
+      "belt_line": 655,
+      "hem_line": 805,
+      "foot_baseline": 1104
+    }
+  },
+  "generation_topology": {
+    "cardinals": {
+      "north": [
+        "south-master",
+        "anchor-card"
+      ],
+      "east": [
+        "south-master",
+        "anchor-card"
+      ],
+      "west": [
+        "south-master",
+        "anchor-card"
+      ]
+    },
+    "diagonals": {
+      "northeast": [
+        "south-master",
+        "north",
+        "east",
+        "anchor-card"
+      ],
+      "southeast": [
+        "south-master",
+        "south",
+        "east",
+        "anchor-card"
+      ],
+      "southwest": [
+        "south-master",
+        "south",
+        "west",
+        "anchor-card"
+      ],
+      "northwest": [
+        "south-master",
+        "north",
+        "west",
+        "anchor-card"
+      ]
+    }
+  },
+  "visual_contract": {
+    "character": "small black-haired girl with short bob, red-orange tunic dress, cream trim and chest ornament, dark purple sash and shorts, brown boots",
+    "pose": "neutral idle, arms relaxed, feet planted symmetrically",
+    "projection": "top-down game character turnaround, not isometric",
+    "lighting": "single camera-relative upper-left soft light across every direction",
+    "background": "transparent requested; raw output preserved if checkerboard is baked"
+  },
+  "delivery": {
+    "frame_size_px": [
+      64,
+      64
+    ],
+    "direction_order": [
+      "north",
+      "northeast",
+      "east",
+      "southeast",
+      "south",
+      "southwest",
+      "west",
+      "northwest"
+    ],
+    "target_visible_height_px": 52,
+    "height_tolerance_px": 1,
+    "target_bottom_exclusive_y": 61,
+    "head_foot_axis_offset_spread_limit_px": 2.5,
+    "palette_reference": "south",
+    "palette_colors": 32,
+    "alpha": "binary",
+    "post_recovery_resampling": "forbidden"
+  },
+  "selected_integer_grids": {
+    "north": 64,
+    "northeast": 69,
+    "east": 64,
+    "southeast": 66,
+    "south": 64,
+    "southwest": 64,
+    "west": 65,
+    "northwest": 64
+  },
+  "iteration_notes": {
+    "rejected_source": "source/rejected/east-pseudo-small-v1.png",
+    "reason": "The first east pseudo-pixel source occupied only 956 vertical source pixels and produced a 50-to-54 logical-pixel grid jump.",
+    "correction": "Regenerated east at the south master's 1050-pixel visible source height."
+  },
+  "approval_boundary": "Prototype only; do not copy into Assets/Art/2D before user approval."
+}

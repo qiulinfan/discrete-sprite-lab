@@ -1,0 +1,729 @@
+{
+  "schema_version": 1,
+  "tool": "create-topdown-8dir-sprites.build",
+  "tool_version": "2.0.0",
+  "direction_order": [
+    "north",
+    "northeast",
+    "east",
+    "southeast",
+    "south",
+    "southwest",
+    "west",
+    "northwest"
+  ],
+  "sheet": {
+    "path": "generated/player-black-haired-girl-idle-8dir-64-v8.png",
+    "size_px": [
+      256,
+      128
+    ],
+    "sha256": "b0ba5df64e7ed5882917e91a8ceaa0b071556f03bec2eb80b5a1e20145cb7c00",
+    "rgba_sha256": "b77c37c5e5b7a15e912f2c039db987542a72cb504d4965b2c4393dc2f1f037c1"
+  },
+  "processing": {
+    "perfect_pixel_version": "0.1.4",
+    "backend": "perfect_pixel_noCV2",
+    "sample_method": "majority",
+    "refine_intensity": 0.0,
+    "default_grid": 64,
+    "grid_overrides": {
+      "north": 64,
+      "northeast": 69,
+      "east": 64,
+      "southeast": 66,
+      "south": 64,
+      "southwest": 64,
+      "west": 65,
+      "northwest": 64
+    },
+    "automatic_integer_calibration": true,
+    "frame_size": 64,
+    "target_visible_height": 52,
+    "height_tolerance": 1,
+    "target_bottom": 61,
+    "post_recovery_resampling": false,
+    "placement": "one-to-one",
+    "palette_mode": "canonical-reference-oklab-medoid",
+    "palette_reference": "south",
+    "colors": 32,
+    "alpha": "binary",
+    "rotation_preview_ms": 120
+  },
+  "palette_rgb": [
+    [
+      171,
+      55,
+      17
+    ],
+    [
+      8,
+      7,
+      4
+    ],
+    [
+      251,
+      200,
+      142
+    ],
+    [
+      53,
+      53,
+      53
+    ],
+    [
+      232,
+      127,
+      65
+    ],
+    [
+      25,
+      24,
+      23
+    ],
+    [
+      107,
+      52,
+      19
+    ],
+    [
+      87,
+      35,
+      54
+    ],
+    [
+      86,
+      82,
+      80
+    ],
+    [
+      210,
+      97,
+      44
+    ],
+    [
+      246,
+      237,
+      227
+    ],
+    [
+      208,
+      172,
+      130
+    ],
+    [
+      84,
+      40,
+      14
+    ],
+    [
+      53,
+      21,
+      8
+    ],
+    [
+      38,
+      38,
+      37
+    ],
+    [
+      163,
+      123,
+      84
+    ],
+    [
+      137,
+      41,
+      13
+    ],
+    [
+      31,
+      14,
+      4
+    ],
+    [
+      250,
+      180,
+      115
+    ],
+    [
+      194,
+      154,
+      111
+    ],
+    [
+      54,
+      21,
+      33
+    ],
+    [
+      113,
+      32,
+      11
+    ],
+    [
+      18,
+      11,
+      10
+    ],
+    [
+      232,
+      150,
+      92
+    ],
+    [
+      48,
+      48,
+      47
+    ],
+    [
+      70,
+      69,
+      67
+    ],
+    [
+      244,
+      216,
+      174
+    ],
+    [
+      131,
+      64,
+      23
+    ],
+    [
+      71,
+      26,
+      6
+    ],
+    [
+      21,
+      11,
+      3
+    ],
+    [
+      37,
+      15,
+      19
+    ],
+    [
+      30,
+      30,
+      29
+    ]
+  ],
+  "frames": [
+    {
+      "id": "north",
+      "direction": "north",
+      "rect_px_top_left": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "pivot_px_from_bottom_left": [
+        32,
+        3
+      ],
+      "landmarks": {
+        "alpha_bbox": [
+          21,
+          10,
+          43,
+          61
+        ],
+        "visible_width": 22,
+        "visible_height": 51,
+        "alpha_centroid_x": 31.336165048543688,
+        "head": {
+          "centroid_x": 31.4,
+          "extent_mid_x": 31.5,
+          "bbox": [
+            21,
+            10,
+            43,
+            29
+          ],
+          "visible_pixels": 330
+        },
+        "torso": {
+          "centroid_x": 31.29498525073746,
+          "extent_mid_x": 31.0,
+          "bbox": [
+            21,
+            28,
+            42,
+            47
+          ],
+          "visible_pixels": 339
+        },
+        "feet": {
+          "centroid_x": 31.339130434782607,
+          "extent_mid_x": 31.5,
+          "bbox": [
+            25,
+            51,
+            39,
+            61
+          ],
+          "visible_pixels": 115
+        },
+        "head_foot_axis_offset": 0.0,
+        "direction": "north",
+        "unique_palette_colors": 31
+      },
+      "path": "working/final-frames/north.png",
+      "sha256": "9de61c4fa80ae76dc942e6d88f949c9c370c24dfeb611df9bc1f2f9935fdbb6e",
+      "rgba_sha256": "fcfd8c3322e539c6e13ffd1761db6751df1e41319848374808446c499d564a5e"
+    },
+    {
+      "id": "northeast",
+      "direction": "northeast",
+      "rect_px_top_left": {
+        "x": 64,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "pivot_px_from_bottom_left": [
+        32,
+        3
+      ],
+      "landmarks": {
+        "alpha_bbox": [
+          21,
+          8,
+          41,
+          61
+        ],
+        "visible_width": 20,
+        "visible_height": 53,
+        "alpha_centroid_x": 30.875160875160876,
+        "head": {
+          "centroid_x": 30.706451612903226,
+          "extent_mid_x": 30.5,
+          "bbox": [
+            21,
+            8,
+            41,
+            28
+          ],
+          "visible_pixels": 310
+        },
+        "torso": {
+          "centroid_x": 30.825082508250826,
+          "extent_mid_x": 31.0,
+          "bbox": [
+            22,
+            27,
+            41,
+            46
+          ],
+          "visible_pixels": 303
+        },
+        "feet": {
+          "centroid_x": 31.1869918699187,
+          "extent_mid_x": 31.5,
+          "bbox": [
+            25,
+            50,
+            39,
+            61
+          ],
+          "visible_pixels": 123
+        },
+        "head_foot_axis_offset": -1.0,
+        "direction": "northeast",
+        "unique_palette_colors": 32
+      },
+      "path": "working/final-frames/northeast.png",
+      "sha256": "5febcde3df9d3cdd56054fb884c14139ba567a9d486acf3a89aab707fdd9a857",
+      "rgba_sha256": "015fe715691309d5d6e4c063ce45ef58802387b002c4891e4e5eda9f544fe828"
+    },
+    {
+      "id": "east",
+      "direction": "east",
+      "rect_px_top_left": {
+        "x": 128,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "pivot_px_from_bottom_left": [
+        32,
+        3
+      ],
+      "landmarks": {
+        "alpha_bbox": [
+          20,
+          9,
+          40,
+          61
+        ],
+        "visible_width": 20,
+        "visible_height": 52,
+        "alpha_centroid_x": 29.848765432098766,
+        "head": {
+          "centroid_x": 29.517571884984026,
+          "extent_mid_x": 29.5,
+          "bbox": [
+            20,
+            9,
+            40,
+            29
+          ],
+          "visible_pixels": 313
+        },
+        "torso": {
+          "centroid_x": 30.032258064516128,
+          "extent_mid_x": 30.0,
+          "bbox": [
+            23,
+            27,
+            38,
+            46
+          ],
+          "visible_pixels": 217
+        },
+        "feet": {
+          "centroid_x": 30.46511627906977,
+          "extent_mid_x": 31.0,
+          "bbox": [
+            26,
+            51,
+            37,
+            61
+          ],
+          "visible_pixels": 86
+        },
+        "head_foot_axis_offset": -1.5,
+        "direction": "east",
+        "unique_palette_colors": 31
+      },
+      "path": "working/final-frames/east.png",
+      "sha256": "85dece90b9b1952871e3a78edeccdfb7fdfa9c910b93ed119ee93d9a342c931f",
+      "rgba_sha256": "2a391fd5f1101623fc46c9f8a1fe923738e7608cfa45044688da7d33910e9678"
+    },
+    {
+      "id": "southeast",
+      "direction": "southeast",
+      "rect_px_top_left": {
+        "x": 192,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "pivot_px_from_bottom_left": [
+        32,
+        3
+      ],
+      "landmarks": {
+        "alpha_bbox": [
+          21,
+          9,
+          41,
+          61
+        ],
+        "visible_width": 20,
+        "visible_height": 52,
+        "alpha_centroid_x": 30.530423280423282,
+        "head": {
+          "centroid_x": 30.402476780185758,
+          "extent_mid_x": 30.5,
+          "bbox": [
+            21,
+            9,
+            41,
+            29
+          ],
+          "visible_pixels": 323
+        },
+        "torso": {
+          "centroid_x": 30.717607973421927,
+          "extent_mid_x": 30.5,
+          "bbox": [
+            22,
+            27,
+            40,
+            46
+          ],
+          "visible_pixels": 301
+        },
+        "feet": {
+          "centroid_x": 30.577319587628867,
+          "extent_mid_x": 31.5,
+          "bbox": [
+            25,
+            51,
+            39,
+            61
+          ],
+          "visible_pixels": 97
+        },
+        "head_foot_axis_offset": -1.0,
+        "direction": "southeast",
+        "unique_palette_colors": 32
+      },
+      "path": "working/final-frames/southeast.png",
+      "sha256": "6a805a39ae5dfb90c015f0b3af79fb4a82f57709e3aa4aff4d18a0221f44f9a5",
+      "rgba_sha256": "9b857239c7c5f2ca85dd8223e06c5f2133b375a50afb363d61ae3fd160da49c0"
+    },
+    {
+      "id": "south",
+      "direction": "south",
+      "rect_px_top_left": {
+        "x": 0,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "pivot_px_from_bottom_left": [
+        32,
+        3
+      ],
+      "landmarks": {
+        "alpha_bbox": [
+          20,
+          9,
+          43,
+          61
+        ],
+        "visible_width": 23,
+        "visible_height": 52,
+        "alpha_centroid_x": 31.01360544217687,
+        "head": {
+          "centroid_x": 31.0,
+          "extent_mid_x": 31.0,
+          "bbox": [
+            20,
+            9,
+            43,
+            29
+          ],
+          "visible_pixels": 360
+        },
+        "torso": {
+          "centroid_x": 31.02247191011236,
+          "extent_mid_x": 31.0,
+          "bbox": [
+            20,
+            27,
+            43,
+            46
+          ],
+          "visible_pixels": 356
+        },
+        "feet": {
+          "centroid_x": 31.033333333333335,
+          "extent_mid_x": 31.0,
+          "bbox": [
+            24,
+            51,
+            39,
+            61
+          ],
+          "visible_pixels": 120
+        },
+        "head_foot_axis_offset": 0.0,
+        "direction": "south",
+        "unique_palette_colors": 32
+      },
+      "path": "working/final-frames/south.png",
+      "sha256": "6e200b3a250b3c27d04f93b7725eb4e7c23872233fa6e223417a3844892d74c2",
+      "rgba_sha256": "cbb67b49354f9f7daf32bb7707ad2d017743260d7f3c123934e471b0d37f6791"
+    },
+    {
+      "id": "southwest",
+      "direction": "southwest",
+      "rect_px_top_left": {
+        "x": 64,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "pivot_px_from_bottom_left": [
+        32,
+        3
+      ],
+      "landmarks": {
+        "alpha_bbox": [
+          22,
+          10,
+          43,
+          61
+        ],
+        "visible_width": 21,
+        "visible_height": 51,
+        "alpha_centroid_x": 31.758940397350994,
+        "head": {
+          "centroid_x": 31.965299684542586,
+          "extent_mid_x": 32.0,
+          "bbox": [
+            22,
+            10,
+            43,
+            29
+          ],
+          "visible_pixels": 317
+        },
+        "torso": {
+          "centroid_x": 31.613333333333333,
+          "extent_mid_x": 31.5,
+          "bbox": [
+            23,
+            28,
+            41,
+            47
+          ],
+          "visible_pixels": 300
+        },
+        "feet": {
+          "centroid_x": 31.637254901960784,
+          "extent_mid_x": 31.0,
+          "bbox": [
+            24,
+            51,
+            39,
+            61
+          ],
+          "visible_pixels": 102
+        },
+        "head_foot_axis_offset": 1.0,
+        "direction": "southwest",
+        "unique_palette_colors": 32
+      },
+      "path": "working/final-frames/southwest.png",
+      "sha256": "84c4b4b681c2fcf605fdfdfcf2092b016177045b3a1b2b1d29f5aa112e63b6b0",
+      "rgba_sha256": "51f91e93f30e23d948d941322a5c37ede242d0687a80e207320f84ecc2e811c3"
+    },
+    {
+      "id": "west",
+      "direction": "west",
+      "rect_px_top_left": {
+        "x": 128,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "pivot_px_from_bottom_left": [
+        32,
+        3
+      ],
+      "landmarks": {
+        "alpha_bbox": [
+          23,
+          10,
+          43,
+          61
+        ],
+        "visible_width": 20,
+        "visible_height": 51,
+        "alpha_centroid_x": 32.12871287128713,
+        "head": {
+          "centroid_x": 32.23076923076923,
+          "extent_mid_x": 32.5,
+          "bbox": [
+            23,
+            10,
+            43,
+            29
+          ],
+          "visible_pixels": 299
+        },
+        "torso": {
+          "centroid_x": 31.995192307692307,
+          "extent_mid_x": 32.0,
+          "bbox": [
+            25,
+            28,
+            40,
+            47
+          ],
+          "visible_pixels": 208
+        },
+        "feet": {
+          "centroid_x": 32.054054054054056,
+          "extent_mid_x": 31.5,
+          "bbox": [
+            27,
+            51,
+            37,
+            61
+          ],
+          "visible_pixels": 74
+        },
+        "head_foot_axis_offset": 1.0,
+        "direction": "west",
+        "unique_palette_colors": 31
+      },
+      "path": "working/final-frames/west.png",
+      "sha256": "5c6a4eb6b672dc0d35f0e9a882049cc31b70684c14dc063b8e3f928f31dd868d",
+      "rgba_sha256": "c37147c563b03f5ff9bf215aa0e074ce902d693e8759c216f1632c59c494afd5"
+    },
+    {
+      "id": "northwest",
+      "direction": "northwest",
+      "rect_px_top_left": {
+        "x": 192,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "pivot_px_from_bottom_left": [
+        32,
+        3
+      ],
+      "landmarks": {
+        "alpha_bbox": [
+          22,
+          9,
+          43,
+          61
+        ],
+        "visible_width": 21,
+        "visible_height": 52,
+        "alpha_centroid_x": 31.895674300254452,
+        "head": {
+          "centroid_x": 31.728658536585368,
+          "extent_mid_x": 32.0,
+          "bbox": [
+            22,
+            9,
+            43,
+            29
+          ],
+          "visible_pixels": 328
+        },
+        "torso": {
+          "centroid_x": 32.2943143812709,
+          "extent_mid_x": 32.0,
+          "bbox": [
+            23,
+            27,
+            42,
+            46
+          ],
+          "visible_pixels": 299
+        },
+        "feet": {
+          "centroid_x": 31.406779661016948,
+          "extent_mid_x": 31.0,
+          "bbox": [
+            24,
+            51,
+            39,
+            61
+          ],
+          "visible_pixels": 118
+        },
+        "head_foot_axis_offset": 1.0,
+        "direction": "northwest",
+        "unique_palette_colors": 31
+      },
+      "path": "working/final-frames/northwest.png",
+      "sha256": "0c8f6ffb7c82af4986645eeab77206aa7ca8a68502d0753e8ece773f4ee075e1",
+      "rgba_sha256": "825d7203d60821bc7b55ff79768f2f7f28b90735b06702edef41980d40e854ba"
+    }
+  ]
+}

@@ -1,0 +1,724 @@
+{
+  "schema_version": 1,
+  "tool": "create-fixed-direction-action-sprites.build",
+  "tool_version": "3.4.0",
+  "referenced_skill": {
+    "name": "create-topdown-8dir-sprites",
+    "root": "source-project://qlblog/skills/create-topdown-8dir-sprites",
+    "script_version": "2.1.0"
+  },
+  "phase_order": [
+    "left-contact",
+    "left-recoil",
+    "passing-right",
+    "right-contact",
+    "right-recoil",
+    "passing-left"
+  ],
+  "sheet": {
+    "path": "generated/player-black-haired-girl-walk-south-6f-64-v3.png",
+    "size_px": [
+      384,
+      64
+    ],
+    "sha256": "d0fd26fdc30fd86470ee67a1ed6e67de50bc04b3b064adfb045d98d10572981e",
+    "rgba_sha256": "d34e172a9d7ec8eb880ecb5e498c42bed4167f1fb757f5d9adf7fec36a6dfa79"
+  },
+  "processing": {
+    "frame_count": 6,
+    "duration_ms": 120,
+    "loop": true,
+    "frame_size": 64,
+    "height_profile": [
+      52,
+      51,
+      53,
+      52,
+      51,
+      53
+    ],
+    "height_tolerance": 1,
+    "target_bottom": 61,
+    "placement_axis": "body",
+    "contact_frames": [
+      0,
+      3
+    ],
+    "post_recovery_resampling": false,
+    "palette_gold": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-idle-8dir-turnaround-continuity-64-v8/working/final-frames/south.png",
+    "palette_mode": "approved-gold-oklab-medoid",
+    "colors": 32,
+    "alpha": "binary",
+    "identity_lock": null,
+    "identity_offsets": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "phase_pairs": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "transition_pairs": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "require_paired_transition_cadence": false,
+    "derive_paired_motion": false,
+    "require_shared_refined_grid": false,
+    "recovery_grid_policy": "recorded-per-frame",
+    "review_min_size": 1024,
+    "visual_review_required": true,
+    "logical_overrides": [
+      {
+        "frame_index": 0,
+        "phase_id": "left-contact",
+        "path": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-00.png",
+        "sha256": "4b23e2067c00f8bc7cc9fb763414566217bd6f4ecdc5d3b4429c256486a61c8b",
+        "rgba_sha256": "79a4752be6971f52fdb02e1b05e061fa65205c7d803b4840009a3aad7a314d9d",
+        "receipt": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-00.receipt.json",
+        "receipt_sha256": "7d0e15d343738f1c4b2677e11dc21f0e454ce48417524370963d1675fc41f58c"
+      },
+      {
+        "frame_index": 1,
+        "phase_id": "left-recoil",
+        "path": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-01.png",
+        "sha256": "e312ec5e20973859b41e695f89b09863e346f91eee54157d3b0e6dc7beba6873",
+        "rgba_sha256": "d9dafc113c15bb01ab0c366014d5ff32e19042b36df3322d8b5085fc45f9efb0",
+        "receipt": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-01.receipt.json",
+        "receipt_sha256": "62c1dc16b8e8ca411bbff40cb291d10ca865e8b00af6117a9176d0fb00603fed"
+      },
+      {
+        "frame_index": 2,
+        "phase_id": "passing-right",
+        "path": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-02.png",
+        "sha256": "ce4777ac36166dafc0d84408e2671f1877d5bc9b6676192025a1a108f42b3bcb",
+        "rgba_sha256": "f39099310f346bf3679e573085fac2cec2271c0b3b245b6f3c24f25b43fbc55f",
+        "receipt": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-02.receipt.json",
+        "receipt_sha256": "ef83d4bd28399a86e3418bc8e3dea1d89bd100f93445fc4e5ebcb3e75b55fc2d"
+      },
+      {
+        "frame_index": 3,
+        "phase_id": "right-contact",
+        "path": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-03.png",
+        "sha256": "8e12de47544ce51537b38fd4d3dbe72fc15a86766f59d52de330e8535929822f",
+        "rgba_sha256": "b00e91d4931523e22a8df4b34bfe65bfc4e50cde5ac817fededd2a8f0e5b2f68",
+        "receipt": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-03.receipt.json",
+        "receipt_sha256": "9d3846321e73909e2bcb1f9e686c9df119e61071f9fb8b2d0a2dc3dadd514b6d"
+      },
+      {
+        "frame_index": 4,
+        "phase_id": "right-recoil",
+        "path": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-04.png",
+        "sha256": "22bb0a22f803ca5d401418889e1bb46d3910fe27fc2385c84701f1616ea47b84",
+        "rgba_sha256": "7a80d68d957e45e315f590c1742f9bc37b454320c8695e5ca14c0e680743cbc8",
+        "receipt": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-04.receipt.json",
+        "receipt_sha256": "1b5ef58d113e82905ac225080bddd068b922a59096c756c771ba2ba99f0caea2"
+      },
+      {
+        "frame_index": 5,
+        "phase_id": "passing-left",
+        "path": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-05.png",
+        "sha256": "4f0ad78ed3f26caece95cdaa15831265f3d7a536629114b0b72ba235c0be19c5",
+        "rgba_sha256": "1d6d1dae839ae12deaa0b008144d9e91491de7e447df885f0e81532487f9f486",
+        "receipt": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-05.receipt.json",
+        "receipt_sha256": "ea97865a77df270fe58828e4701cfec79ed4cd3a7072d7bb66e4fea7314cad54"
+      }
+    ]
+  },
+  "palette_rgb": [
+    [
+      171,
+      55,
+      17
+    ],
+    [
+      8,
+      7,
+      4
+    ],
+    [
+      251,
+      200,
+      142
+    ],
+    [
+      53,
+      53,
+      53
+    ],
+    [
+      232,
+      127,
+      65
+    ],
+    [
+      113,
+      32,
+      11
+    ],
+    [
+      53,
+      21,
+      8
+    ],
+    [
+      208,
+      172,
+      130
+    ],
+    [
+      31,
+      14,
+      4
+    ],
+    [
+      87,
+      35,
+      54
+    ],
+    [
+      137,
+      41,
+      13
+    ],
+    [
+      210,
+      97,
+      44
+    ],
+    [
+      86,
+      82,
+      80
+    ],
+    [
+      84,
+      40,
+      14
+    ],
+    [
+      18,
+      11,
+      10
+    ],
+    [
+      244,
+      216,
+      174
+    ],
+    [
+      38,
+      38,
+      37
+    ],
+    [
+      71,
+      26,
+      6
+    ],
+    [
+      107,
+      52,
+      19
+    ],
+    [
+      25,
+      24,
+      23
+    ],
+    [
+      163,
+      123,
+      84
+    ],
+    [
+      54,
+      21,
+      33
+    ],
+    [
+      232,
+      150,
+      92
+    ],
+    [
+      250,
+      180,
+      115
+    ],
+    [
+      48,
+      48,
+      47
+    ],
+    [
+      194,
+      154,
+      111
+    ],
+    [
+      37,
+      15,
+      19
+    ],
+    [
+      246,
+      237,
+      227
+    ],
+    [
+      21,
+      11,
+      3
+    ],
+    [
+      30,
+      30,
+      29
+    ],
+    [
+      70,
+      69,
+      67
+    ],
+    [
+      131,
+      64,
+      23
+    ]
+  ],
+  "frames": [
+    {
+      "index": 0,
+      "phase_id": "left-contact",
+      "duration_ms": 120,
+      "contact_event": true,
+      "rect_px_top_left": {
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "pivot_px_from_bottom_left": [
+        32,
+        3
+      ],
+      "path": "working/final-frames/frame-00.png",
+      "sha256": "4b23e2067c00f8bc7cc9fb763414566217bd6f4ecdc5d3b4429c256486a61c8b",
+      "rgba_sha256": "79a4752be6971f52fdb02e1b05e061fa65205c7d803b4840009a3aad7a314d9d",
+      "landmarks": {
+        "alpha_bbox": [
+          20,
+          9,
+          43,
+          61
+        ],
+        "visible_width": 23,
+        "visible_height": 52,
+        "alpha_centroid_x": 31.18362282878412,
+        "head": {
+          "centroid_x": 31.0,
+          "extent_mid_x": 31.0,
+          "bbox": [
+            20,
+            9,
+            43,
+            29
+          ],
+          "visible_pixels": 360
+        },
+        "torso": {
+          "centroid_x": 31.281345565749234,
+          "extent_mid_x": 31.5,
+          "bbox": [
+            22,
+            27,
+            42,
+            46
+          ],
+          "visible_pixels": 327
+        },
+        "feet": {
+          "centroid_x": 33.72727272727273,
+          "extent_mid_x": 33.5,
+          "bbox": [
+            31,
+            59,
+            37,
+            61
+          ],
+          "visible_pixels": 11
+        },
+        "phase_id": "left-contact",
+        "unique_palette_colors": 32
+      }
+    },
+    {
+      "index": 1,
+      "phase_id": "left-recoil",
+      "duration_ms": 120,
+      "contact_event": false,
+      "rect_px_top_left": {
+        "x": 64,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "pivot_px_from_bottom_left": [
+        32,
+        3
+      ],
+      "path": "working/final-frames/frame-01.png",
+      "sha256": "e312ec5e20973859b41e695f89b09863e346f91eee54157d3b0e6dc7beba6873",
+      "rgba_sha256": "d9dafc113c15bb01ab0c366014d5ff32e19042b36df3322d8b5085fc45f9efb0",
+      "landmarks": {
+        "alpha_bbox": [
+          20,
+          10,
+          43,
+          61
+        ],
+        "visible_width": 23,
+        "visible_height": 51,
+        "alpha_centroid_x": 31.46284224250326,
+        "head": {
+          "centroid_x": 31.0,
+          "extent_mid_x": 31.0,
+          "bbox": [
+            20,
+            10,
+            43,
+            29
+          ],
+          "visible_pixels": 347
+        },
+        "torso": {
+          "centroid_x": 31.726708074534162,
+          "extent_mid_x": 31.5,
+          "bbox": [
+            22,
+            28,
+            42,
+            47
+          ],
+          "visible_pixels": 322
+        },
+        "feet": {
+          "centroid_x": 34.27272727272727,
+          "extent_mid_x": 34.5,
+          "bbox": [
+            32,
+            59,
+            38,
+            61
+          ],
+          "visible_pixels": 11
+        },
+        "phase_id": "left-recoil",
+        "unique_palette_colors": 32
+      }
+    },
+    {
+      "index": 2,
+      "phase_id": "passing-right",
+      "duration_ms": 120,
+      "contact_event": false,
+      "rect_px_top_left": {
+        "x": 128,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "pivot_px_from_bottom_left": [
+        32,
+        3
+      ],
+      "path": "working/final-frames/frame-02.png",
+      "sha256": "ce4777ac36166dafc0d84408e2671f1877d5bc9b6676192025a1a108f42b3bcb",
+      "rgba_sha256": "f39099310f346bf3679e573085fac2cec2271c0b3b245b6f3c24f25b43fbc55f",
+      "landmarks": {
+        "alpha_bbox": [
+          20,
+          8,
+          43,
+          61
+        ],
+        "visible_width": 23,
+        "visible_height": 53,
+        "alpha_centroid_x": 31.391356542617046,
+        "head": {
+          "centroid_x": 31.0,
+          "extent_mid_x": 31.0,
+          "bbox": [
+            20,
+            8,
+            43,
+            28
+          ],
+          "visible_pixels": 360
+        },
+        "torso": {
+          "centroid_x": 31.915151515151514,
+          "extent_mid_x": 32.0,
+          "bbox": [
+            22,
+            27,
+            43,
+            46
+          ],
+          "visible_pixels": 330
+        },
+        "feet": {
+          "centroid_x": 32.46666666666667,
+          "extent_mid_x": 31.5,
+          "bbox": [
+            26,
+            59,
+            38,
+            61
+          ],
+          "visible_pixels": 15
+        },
+        "phase_id": "passing-right",
+        "unique_palette_colors": 32
+      }
+    },
+    {
+      "index": 3,
+      "phase_id": "right-contact",
+      "duration_ms": 120,
+      "contact_event": true,
+      "rect_px_top_left": {
+        "x": 192,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "pivot_px_from_bottom_left": [
+        32,
+        3
+      ],
+      "path": "working/final-frames/frame-03.png",
+      "sha256": "8e12de47544ce51537b38fd4d3dbe72fc15a86766f59d52de330e8535929822f",
+      "rgba_sha256": "b00e91d4931523e22a8df4b34bfe65bfc4e50cde5ac817fededd2a8f0e5b2f68",
+      "landmarks": {
+        "alpha_bbox": [
+          20,
+          10,
+          43,
+          61
+        ],
+        "visible_width": 23,
+        "visible_height": 51,
+        "alpha_centroid_x": 31.38680465717982,
+        "head": {
+          "centroid_x": 31.0,
+          "extent_mid_x": 31.0,
+          "bbox": [
+            20,
+            10,
+            43,
+            29
+          ],
+          "visible_pixels": 347
+        },
+        "torso": {
+          "centroid_x": 31.932515337423315,
+          "extent_mid_x": 32.0,
+          "bbox": [
+            22,
+            28,
+            43,
+            47
+          ],
+          "visible_pixels": 326
+        },
+        "feet": {
+          "centroid_x": 28.727272727272727,
+          "extent_mid_x": 28.5,
+          "bbox": [
+            26,
+            59,
+            32,
+            61
+          ],
+          "visible_pixels": 11
+        },
+        "phase_id": "right-contact",
+        "unique_palette_colors": 31
+      }
+    },
+    {
+      "index": 4,
+      "phase_id": "right-recoil",
+      "duration_ms": 120,
+      "contact_event": false,
+      "rect_px_top_left": {
+        "x": 256,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "pivot_px_from_bottom_left": [
+        32,
+        3
+      ],
+      "path": "working/final-frames/frame-04.png",
+      "sha256": "22bb0a22f803ca5d401418889e1bb46d3910fe27fc2385c84701f1616ea47b84",
+      "rgba_sha256": "7a80d68d957e45e315f590c1742f9bc37b454320c8695e5ca14c0e680743cbc8",
+      "landmarks": {
+        "alpha_bbox": [
+          20,
+          9,
+          43,
+          61
+        ],
+        "visible_width": 23,
+        "visible_height": 52,
+        "alpha_centroid_x": 31.333759590792837,
+        "head": {
+          "centroid_x": 31.0,
+          "extent_mid_x": 31.0,
+          "bbox": [
+            20,
+            9,
+            43,
+            29
+          ],
+          "visible_pixels": 360
+        },
+        "torso": {
+          "centroid_x": 31.793846153846154,
+          "extent_mid_x": 31.5,
+          "bbox": [
+            22,
+            27,
+            42,
+            46
+          ],
+          "visible_pixels": 325
+        },
+        "feet": {
+          "centroid_x": 28.5,
+          "extent_mid_x": 28.5,
+          "bbox": [
+            26,
+            59,
+            32,
+            61
+          ],
+          "visible_pixels": 10
+        },
+        "phase_id": "right-recoil",
+        "unique_palette_colors": 32
+      }
+    },
+    {
+      "index": 5,
+      "phase_id": "passing-left",
+      "duration_ms": 120,
+      "contact_event": false,
+      "rect_px_top_left": {
+        "x": 320,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "pivot_px_from_bottom_left": [
+        32,
+        3
+      ],
+      "path": "working/final-frames/frame-05.png",
+      "sha256": "4f0ad78ed3f26caece95cdaa15831265f3d7a536629114b0b72ba235c0be19c5",
+      "rgba_sha256": "1d6d1dae839ae12deaa0b008144d9e91491de7e447df885f0e81532487f9f486",
+      "landmarks": {
+        "alpha_bbox": [
+          20,
+          8,
+          43,
+          61
+        ],
+        "visible_width": 23,
+        "visible_height": 53,
+        "alpha_centroid_x": 31.257178526841447,
+        "head": {
+          "centroid_x": 31.0,
+          "extent_mid_x": 31.0,
+          "bbox": [
+            20,
+            8,
+            43,
+            28
+          ],
+          "visible_pixels": 360
+        },
+        "torso": {
+          "centroid_x": 31.71212121212121,
+          "extent_mid_x": 31.5,
+          "bbox": [
+            22,
+            27,
+            42,
+            46
+          ],
+          "visible_pixels": 330
+        },
+        "feet": {
+          "centroid_x": 29.0,
+          "extent_mid_x": 29.0,
+          "bbox": [
+            27,
+            59,
+            32,
+            61
+          ],
+          "visible_pixels": 8
+        },
+        "phase_id": "passing-left",
+        "unique_palette_colors": 32
+      }
+    }
+  ]
+}

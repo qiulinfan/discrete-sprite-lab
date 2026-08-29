@@ -1,0 +1,517 @@
+{
+  "schema_version": 1,
+  "tool": "pixel-region-workbench.review",
+  "tool_version": "1.1.0",
+  "subject": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/working/final-frames/frame-00.png",
+  "subject_sha256": "4b23e2067c00f8bc7cc9fb763414566217bd6f4ecdc5d3b4429c256486a61c8b",
+  "reference": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-idle-8dir-turnaround-continuity-64-v8/working/final-frames/south.png",
+  "reference_sha256": "6e200b3a250b3c27d04f93b7725eb4e7c23872233fa6e223417a3844892d74c2",
+  "resample": "nearest",
+  "scale": 32,
+  "regions": [
+    {
+      "id": "head-identity-south",
+      "rect": [
+        19,
+        8,
+        44,
+        29
+      ],
+      "reference_rect": [
+        19,
+        8,
+        44,
+        29
+      ],
+      "anchor": [
+        31,
+        18
+      ],
+      "semantic_class": "stable_identity",
+      "phase_family": "all",
+      "allowed_transforms": [
+        "identity"
+      ],
+      "context_ring": 1,
+      "subject_review": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/evidence/local-identity-review/frame-00/head-identity-south-subject-32x.png",
+      "subject_review_sha256": "fd27a0e4b66cbe4185274946c609c8c4b8972e8c6aa26815b9100d3454d32d48",
+      "reference_review": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/evidence/local-identity-review/frame-00/head-identity-south-reference-32x.png",
+      "reference_review_sha256": "fd27a0e4b66cbe4185274946c609c8c4b8972e8c6aa26815b9100d3454d32d48",
+      "diff_review": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/evidence/local-identity-review/frame-00/head-identity-south-diff-32x.png",
+      "diff_review_sha256": "cbaaefe6fd27d68b633948f6b13e55d3ee010cf25822f0834d46c67945c9da28",
+      "exact_diff": {
+        "counts": {
+          "subject_only": 0,
+          "reference_only": 0,
+          "recolored": 0
+        },
+        "changed_pixels": 0,
+        "pixels": []
+      },
+      "context_subject_rect": [
+        18,
+        7,
+        45,
+        30
+      ],
+      "context_reference_rect": [
+        18,
+        7,
+        45,
+        30
+      ],
+      "context_subject_review": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/evidence/local-identity-review/frame-00/head-identity-south-context-subject-32x.png",
+      "context_subject_review_sha256": "269dfd524b0c2f9fb8260d4be3f9f05fdede12405d53ed3d503214e9fa99fae6",
+      "context_reference_review": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/evidence/local-identity-review/frame-00/head-identity-south-context-reference-32x.png",
+      "context_reference_review_sha256": "9dd2844c54d0ce8abdb8cd011df278f1d635582fe66be0544f563976031ec7ba",
+      "context_diff_review": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/evidence/local-identity-review/frame-00/head-identity-south-context-diff-32x.png",
+      "context_diff_review_sha256": "3cb071ccc0d2bce4fb2cadb7969d17610a23187e56bf5f106bf517c2d31a2f35",
+      "context_exact_diff": {
+        "counts": {
+          "subject_only": 0,
+          "reference_only": 1,
+          "recolored": 6
+        },
+        "changed_pixels": 7,
+        "pixels": [
+          {
+            "subject_xy": [
+              24,
+              29
+            ],
+            "reference_xy": [
+              24,
+              29
+            ],
+            "kind": "reference_only",
+            "subject_rgba": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "reference_rgba": [
+              113,
+              32,
+              11,
+              255
+            ]
+          },
+          {
+            "subject_xy": [
+              25,
+              29
+            ],
+            "reference_xy": [
+              25,
+              29
+            ],
+            "kind": "recolored",
+            "subject_rgba": [
+              137,
+              41,
+              13,
+              255
+            ],
+            "reference_rgba": [
+              71,
+              26,
+              6,
+              255
+            ]
+          },
+          {
+            "subject_xy": [
+              26,
+              29
+            ],
+            "reference_xy": [
+              26,
+              29
+            ],
+            "kind": "recolored",
+            "subject_rgba": [
+              171,
+              55,
+              17,
+              255
+            ],
+            "reference_rgba": [
+              113,
+              32,
+              11,
+              255
+            ]
+          },
+          {
+            "subject_xy": [
+              27,
+              29
+            ],
+            "reference_xy": [
+              27,
+              29
+            ],
+            "kind": "recolored",
+            "subject_rgba": [
+              113,
+              32,
+              11,
+              255
+            ],
+            "reference_rgba": [
+              208,
+              172,
+              130,
+              255
+            ]
+          },
+          {
+            "subject_xy": [
+              35,
+              29
+            ],
+            "reference_xy": [
+              35,
+              29
+            ],
+            "kind": "recolored",
+            "subject_rgba": [
+              251,
+              200,
+              142,
+              255
+            ],
+            "reference_rgba": [
+              208,
+              172,
+              130,
+              255
+            ]
+          },
+          {
+            "subject_xy": [
+              36,
+              29
+            ],
+            "reference_xy": [
+              36,
+              29
+            ],
+            "kind": "recolored",
+            "subject_rgba": [
+              171,
+              55,
+              17,
+              255
+            ],
+            "reference_rgba": [
+              113,
+              32,
+              11,
+              255
+            ]
+          },
+          {
+            "subject_xy": [
+              38,
+              29
+            ],
+            "reference_xy": [
+              38,
+              29
+            ],
+            "kind": "recolored",
+            "subject_rgba": [
+              71,
+              26,
+              6,
+              255
+            ],
+            "reference_rgba": [
+              84,
+              40,
+              14,
+              255
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cross-core-south",
+      "rect": [
+        28,
+        28,
+        35,
+        38
+      ],
+      "reference_rect": [
+        28,
+        28,
+        35,
+        38
+      ],
+      "anchor": [
+        31,
+        33
+      ],
+      "semantic_class": "stable_identity",
+      "phase_family": "all",
+      "allowed_transforms": [
+        "identity"
+      ],
+      "context_ring": 1,
+      "subject_review": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/evidence/local-identity-review/frame-00/cross-core-south-subject-32x.png",
+      "subject_review_sha256": "02b3862a882e88036cf3b969547955874588198ae343ecd8a5a555593149a486",
+      "reference_review": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/evidence/local-identity-review/frame-00/cross-core-south-reference-32x.png",
+      "reference_review_sha256": "02b3862a882e88036cf3b969547955874588198ae343ecd8a5a555593149a486",
+      "diff_review": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/evidence/local-identity-review/frame-00/cross-core-south-diff-32x.png",
+      "diff_review_sha256": "59bc6ecdbb323f50a9935b772796671b75e2d50402f4d207cc067c391f4bfc45",
+      "exact_diff": {
+        "counts": {
+          "subject_only": 0,
+          "reference_only": 0,
+          "recolored": 0
+        },
+        "changed_pixels": 0,
+        "pixels": []
+      },
+      "context_subject_rect": [
+        27,
+        27,
+        36,
+        39
+      ],
+      "context_reference_rect": [
+        27,
+        27,
+        36,
+        39
+      ],
+      "context_subject_review": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/evidence/local-identity-review/frame-00/cross-core-south-context-subject-32x.png",
+      "context_subject_review_sha256": "240bfd3ea38177ce78316ba9facd462a2560bebfaab90625663b7748b0bc063b",
+      "context_reference_review": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/evidence/local-identity-review/frame-00/cross-core-south-context-reference-32x.png",
+      "context_reference_review_sha256": "56899010ded61e407a7711815a20295f69d4d8e05446cc9cc801fdb4f367b832",
+      "context_diff_review": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/evidence/local-identity-review/frame-00/cross-core-south-context-diff-32x.png",
+      "context_diff_review_sha256": "7c257f5c8ec63dea3a8fd441f43e7ca4949c7c544d72660e6f653c751c2ea83e",
+      "context_exact_diff": {
+        "counts": {
+          "subject_only": 0,
+          "reference_only": 0,
+          "recolored": 9
+        },
+        "changed_pixels": 9,
+        "pixels": [
+          {
+            "subject_xy": [
+              27,
+              29
+            ],
+            "reference_xy": [
+              27,
+              29
+            ],
+            "kind": "recolored",
+            "subject_rgba": [
+              113,
+              32,
+              11,
+              255
+            ],
+            "reference_rgba": [
+              208,
+              172,
+              130,
+              255
+            ]
+          },
+          {
+            "subject_xy": [
+              35,
+              29
+            ],
+            "reference_xy": [
+              35,
+              29
+            ],
+            "kind": "recolored",
+            "subject_rgba": [
+              251,
+              200,
+              142,
+              255
+            ],
+            "reference_rgba": [
+              208,
+              172,
+              130,
+              255
+            ]
+          },
+          {
+            "subject_xy": [
+              27,
+              30
+            ],
+            "reference_xy": [
+              27,
+              30
+            ],
+            "kind": "recolored",
+            "subject_rgba": [
+              171,
+              55,
+              17,
+              255
+            ],
+            "reference_rgba": [
+              137,
+              41,
+              13,
+              255
+            ]
+          },
+          {
+            "subject_xy": [
+              35,
+              30
+            ],
+            "reference_xy": [
+              35,
+              30
+            ],
+            "kind": "recolored",
+            "subject_rgba": [
+              171,
+              55,
+              17,
+              255
+            ],
+            "reference_rgba": [
+              137,
+              41,
+              13,
+              255
+            ]
+          },
+          {
+            "subject_xy": [
+              27,
+              35
+            ],
+            "reference_xy": [
+              27,
+              35
+            ],
+            "kind": "recolored",
+            "subject_rgba": [
+              137,
+              41,
+              13,
+              255
+            ],
+            "reference_rgba": [
+              113,
+              32,
+              11,
+              255
+            ]
+          },
+          {
+            "subject_xy": [
+              35,
+              35
+            ],
+            "reference_xy": [
+              35,
+              35
+            ],
+            "kind": "recolored",
+            "subject_rgba": [
+              171,
+              55,
+              17,
+              255
+            ],
+            "reference_rgba": [
+              113,
+              32,
+              11,
+              255
+            ]
+          },
+          {
+            "subject_xy": [
+              27,
+              36
+            ],
+            "reference_xy": [
+              27,
+              36
+            ],
+            "kind": "recolored",
+            "subject_rgba": [
+              18,
+              11,
+              10,
+              255
+            ],
+            "reference_rgba": [
+              37,
+              15,
+              19,
+              255
+            ]
+          },
+          {
+            "subject_xy": [
+              35,
+              36
+            ],
+            "reference_xy": [
+              35,
+              36
+            ],
+            "kind": "recolored",
+            "subject_rgba": [
+              18,
+              11,
+              10,
+              255
+            ],
+            "reference_rgba": [
+              37,
+              15,
+              19,
+              255
+            ]
+          },
+          {
+            "subject_xy": [
+              27,
+              38
+            ],
+            "reference_xy": [
+              27,
+              38
+            ],
+            "kind": "recolored",
+            "subject_rgba": [
+              18,
+              11,
+              10,
+              255
+            ],
+            "reference_rgba": [
+              37,
+              15,
+              19,
+              255
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

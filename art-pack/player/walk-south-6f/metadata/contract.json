@@ -1,0 +1,102 @@
+{
+  "schema_version": 3,
+  "job_id": "player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3",
+  "status": "approved-temporal-gold",
+  "skill": "create-fixed-direction-action-sprites 3.4.0",
+  "atomic_scope": {
+    "character": "black-haired girl v8 gold",
+    "direction": "south",
+    "action": "walk",
+    "frame_count": 6,
+    "loop": true
+  },
+  "gold_authority": {
+    "high_detail": "ArtSource/2D/Player/player-black-haired-girl-idle-8dir-turnaround-continuity-64-v8/source/high-detail/south.png",
+    "pseudo_pixel": "ArtSource/2D/Player/player-black-haired-girl-idle-8dir-turnaround-continuity-64-v8/source/pseudo-pixel/south.png",
+    "logical_frame": "ArtSource/2D/Player/player-black-haired-girl-idle-8dir-turnaround-continuity-64-v8/working/final-frames/south.png"
+  },
+  "generation": {
+    "mode": "six complete high-detail frames generated independently",
+    "generation_order": [
+      0,
+      3,
+      2,
+      5,
+      1,
+      4
+    ],
+    "global_raster_mirror": "forbidden",
+    "broad_identity_overlay": "forbidden",
+    "pose_reference_role": "temporal silhouette and limb order only",
+    "identity_reference_role": "identity, costume, anatomy, camera, proportions, expression, and lighting authority"
+  },
+  "phase_order": [
+    "left-contact",
+    "left-recoil",
+    "passing-right",
+    "right-contact",
+    "right-recoil",
+    "passing-left"
+  ],
+  "processing": {
+    "duration_ms": 120,
+    "frame_size_px": [
+      64,
+      64
+    ],
+    "height_profile_px": [
+      52,
+      51,
+      53,
+      52,
+      51,
+      53
+    ],
+    "target_bottom_exclusive_y": 61,
+    "palette_colors": 32,
+    "binary_alpha": true,
+    "post_recovery_resampling": "forbidden",
+    "recovery_grid_policy": "recorded-per-frame",
+    "paired_transition_cadence": {
+      "mode": "visual-diagnostic",
+      "reference_limit": 1.15,
+      "observed_max": 1.4775858611898827,
+      "accepted_by": "user"
+    }
+  },
+  "visual_review": {
+    "high_detail": {
+      "required": true,
+      "mode": "one complete frame at native resolution plus local anatomy crops",
+      "regions": [
+        "full-body",
+        "head-and-face",
+        "left-arm",
+        "right-arm",
+        "waist-and-hips",
+        "left-leg-and-boot",
+        "right-leg-and-boot"
+      ]
+    },
+    "pseudo_pixel": {
+      "required": true,
+      "mode": "one complete source at native resolution plus local feature and lattice crops"
+    },
+    "logical_frames": {
+      "required": true,
+      "minimum_long_edge_px": 1024,
+      "resample": "nearest"
+    },
+    "loop": {
+      "required": true
+    }
+  },
+  "local_pixel_repair": {
+    "allowed": "agent-approved bounded semantic features only",
+    "script": "create-fixed-direction-action-sprites/scripts/pixel_region_workbench.py",
+    "joint_crossing_patch": "forbidden",
+    "continuous_cv_repair": "forbidden"
+  },
+  "completion_boundary": "All four visual stages passed with explicit user approval. The six south temporal phases may be handed to create-topdown-8dir-sprites; Unity import remains a separate authorization.",
+  "disabled_route": "create-2d-game-art"
+}

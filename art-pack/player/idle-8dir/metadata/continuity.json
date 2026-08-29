@@ -1,0 +1,491 @@
+{
+  "schema_version": 1,
+  "direction_order": [
+    "north",
+    "northeast",
+    "east",
+    "southeast",
+    "south",
+    "southwest",
+    "west",
+    "northwest"
+  ],
+  "frame_metrics": [
+    {
+      "alpha_bbox": [
+        21,
+        10,
+        43,
+        61
+      ],
+      "visible_width": 22,
+      "visible_height": 51,
+      "alpha_centroid_x": 31.336165048543688,
+      "head": {
+        "centroid_x": 31.4,
+        "extent_mid_x": 31.5,
+        "bbox": [
+          21,
+          10,
+          43,
+          29
+        ],
+        "visible_pixels": 330
+      },
+      "torso": {
+        "centroid_x": 31.29498525073746,
+        "extent_mid_x": 31.0,
+        "bbox": [
+          21,
+          28,
+          42,
+          47
+        ],
+        "visible_pixels": 339
+      },
+      "feet": {
+        "centroid_x": 31.339130434782607,
+        "extent_mid_x": 31.5,
+        "bbox": [
+          25,
+          51,
+          39,
+          61
+        ],
+        "visible_pixels": 115
+      },
+      "head_foot_axis_offset": 0.0,
+      "direction": "north",
+      "unique_palette_colors": 31
+    },
+    {
+      "alpha_bbox": [
+        21,
+        8,
+        41,
+        61
+      ],
+      "visible_width": 20,
+      "visible_height": 53,
+      "alpha_centroid_x": 30.875160875160876,
+      "head": {
+        "centroid_x": 30.706451612903226,
+        "extent_mid_x": 30.5,
+        "bbox": [
+          21,
+          8,
+          41,
+          28
+        ],
+        "visible_pixels": 310
+      },
+      "torso": {
+        "centroid_x": 30.825082508250826,
+        "extent_mid_x": 31.0,
+        "bbox": [
+          22,
+          27,
+          41,
+          46
+        ],
+        "visible_pixels": 303
+      },
+      "feet": {
+        "centroid_x": 31.1869918699187,
+        "extent_mid_x": 31.5,
+        "bbox": [
+          25,
+          50,
+          39,
+          61
+        ],
+        "visible_pixels": 123
+      },
+      "head_foot_axis_offset": -1.0,
+      "direction": "northeast",
+      "unique_palette_colors": 32
+    },
+    {
+      "alpha_bbox": [
+        20,
+        9,
+        40,
+        61
+      ],
+      "visible_width": 20,
+      "visible_height": 52,
+      "alpha_centroid_x": 29.848765432098766,
+      "head": {
+        "centroid_x": 29.517571884984026,
+        "extent_mid_x": 29.5,
+        "bbox": [
+          20,
+          9,
+          40,
+          29
+        ],
+        "visible_pixels": 313
+      },
+      "torso": {
+        "centroid_x": 30.032258064516128,
+        "extent_mid_x": 30.0,
+        "bbox": [
+          23,
+          27,
+          38,
+          46
+        ],
+        "visible_pixels": 217
+      },
+      "feet": {
+        "centroid_x": 30.46511627906977,
+        "extent_mid_x": 31.0,
+        "bbox": [
+          26,
+          51,
+          37,
+          61
+        ],
+        "visible_pixels": 86
+      },
+      "head_foot_axis_offset": -1.5,
+      "direction": "east",
+      "unique_palette_colors": 31
+    },
+    {
+      "alpha_bbox": [
+        21,
+        9,
+        41,
+        61
+      ],
+      "visible_width": 20,
+      "visible_height": 52,
+      "alpha_centroid_x": 30.530423280423282,
+      "head": {
+        "centroid_x": 30.402476780185758,
+        "extent_mid_x": 30.5,
+        "bbox": [
+          21,
+          9,
+          41,
+          29
+        ],
+        "visible_pixels": 323
+      },
+      "torso": {
+        "centroid_x": 30.717607973421927,
+        "extent_mid_x": 30.5,
+        "bbox": [
+          22,
+          27,
+          40,
+          46
+        ],
+        "visible_pixels": 301
+      },
+      "feet": {
+        "centroid_x": 30.577319587628867,
+        "extent_mid_x": 31.5,
+        "bbox": [
+          25,
+          51,
+          39,
+          61
+        ],
+        "visible_pixels": 97
+      },
+      "head_foot_axis_offset": -1.0,
+      "direction": "southeast",
+      "unique_palette_colors": 32
+    },
+    {
+      "alpha_bbox": [
+        20,
+        9,
+        43,
+        61
+      ],
+      "visible_width": 23,
+      "visible_height": 52,
+      "alpha_centroid_x": 31.01360544217687,
+      "head": {
+        "centroid_x": 31.0,
+        "extent_mid_x": 31.0,
+        "bbox": [
+          20,
+          9,
+          43,
+          29
+        ],
+        "visible_pixels": 360
+      },
+      "torso": {
+        "centroid_x": 31.02247191011236,
+        "extent_mid_x": 31.0,
+        "bbox": [
+          20,
+          27,
+          43,
+          46
+        ],
+        "visible_pixels": 356
+      },
+      "feet": {
+        "centroid_x": 31.033333333333335,
+        "extent_mid_x": 31.0,
+        "bbox": [
+          24,
+          51,
+          39,
+          61
+        ],
+        "visible_pixels": 120
+      },
+      "head_foot_axis_offset": 0.0,
+      "direction": "south",
+      "unique_palette_colors": 32
+    },
+    {
+      "alpha_bbox": [
+        22,
+        10,
+        43,
+        61
+      ],
+      "visible_width": 21,
+      "visible_height": 51,
+      "alpha_centroid_x": 31.758940397350994,
+      "head": {
+        "centroid_x": 31.965299684542586,
+        "extent_mid_x": 32.0,
+        "bbox": [
+          22,
+          10,
+          43,
+          29
+        ],
+        "visible_pixels": 317
+      },
+      "torso": {
+        "centroid_x": 31.613333333333333,
+        "extent_mid_x": 31.5,
+        "bbox": [
+          23,
+          28,
+          41,
+          47
+        ],
+        "visible_pixels": 300
+      },
+      "feet": {
+        "centroid_x": 31.637254901960784,
+        "extent_mid_x": 31.0,
+        "bbox": [
+          24,
+          51,
+          39,
+          61
+        ],
+        "visible_pixels": 102
+      },
+      "head_foot_axis_offset": 1.0,
+      "direction": "southwest",
+      "unique_palette_colors": 32
+    },
+    {
+      "alpha_bbox": [
+        23,
+        10,
+        43,
+        61
+      ],
+      "visible_width": 20,
+      "visible_height": 51,
+      "alpha_centroid_x": 32.12871287128713,
+      "head": {
+        "centroid_x": 32.23076923076923,
+        "extent_mid_x": 32.5,
+        "bbox": [
+          23,
+          10,
+          43,
+          29
+        ],
+        "visible_pixels": 299
+      },
+      "torso": {
+        "centroid_x": 31.995192307692307,
+        "extent_mid_x": 32.0,
+        "bbox": [
+          25,
+          28,
+          40,
+          47
+        ],
+        "visible_pixels": 208
+      },
+      "feet": {
+        "centroid_x": 32.054054054054056,
+        "extent_mid_x": 31.5,
+        "bbox": [
+          27,
+          51,
+          37,
+          61
+        ],
+        "visible_pixels": 74
+      },
+      "head_foot_axis_offset": 1.0,
+      "direction": "west",
+      "unique_palette_colors": 31
+    },
+    {
+      "alpha_bbox": [
+        22,
+        9,
+        43,
+        61
+      ],
+      "visible_width": 21,
+      "visible_height": 52,
+      "alpha_centroid_x": 31.895674300254452,
+      "head": {
+        "centroid_x": 31.728658536585368,
+        "extent_mid_x": 32.0,
+        "bbox": [
+          22,
+          9,
+          43,
+          29
+        ],
+        "visible_pixels": 328
+      },
+      "torso": {
+        "centroid_x": 32.2943143812709,
+        "extent_mid_x": 32.0,
+        "bbox": [
+          23,
+          27,
+          42,
+          46
+        ],
+        "visible_pixels": 299
+      },
+      "feet": {
+        "centroid_x": 31.406779661016948,
+        "extent_mid_x": 31.0,
+        "bbox": [
+          24,
+          51,
+          39,
+          61
+        ],
+        "visible_pixels": 118
+      },
+      "head_foot_axis_offset": 1.0,
+      "direction": "northwest",
+      "unique_palette_colors": 31
+    }
+  ],
+  "transitions": [
+    {
+      "from": "north",
+      "to": "northeast",
+      "head_anchor_dx": 0.6935483870967722,
+      "torso_anchor_dx": 0.4699027424866351,
+      "foot_axis_dx": 0.0,
+      "head_foot_axis_offset_delta": 1.0,
+      "visible_width_delta": 2,
+      "visible_height_delta": 2,
+      "palette_total_variation": 0.1501058964651198
+    },
+    {
+      "from": "northeast",
+      "to": "east",
+      "head_anchor_dx": 1.1888797279192005,
+      "torso_anchor_dx": 0.7928244437346983,
+      "foot_axis_dx": 0.5,
+      "head_foot_axis_offset_delta": 0.5,
+      "visible_width_delta": 0,
+      "visible_height_delta": 1,
+      "palette_total_variation": 0.3449282615949283
+    },
+    {
+      "from": "east",
+      "to": "southeast",
+      "head_anchor_dx": 0.884904895201732,
+      "torso_anchor_dx": 0.685349908905799,
+      "foot_axis_dx": 0.5,
+      "head_foot_axis_offset_delta": 0.5,
+      "visible_width_delta": 0,
+      "visible_height_delta": 0,
+      "palette_total_variation": 0.27491181657848324
+    },
+    {
+      "from": "southeast",
+      "to": "south",
+      "head_anchor_dx": 0.5975232198142422,
+      "torso_anchor_dx": 0.3048639366904311,
+      "foot_axis_dx": 0.5,
+      "head_foot_axis_offset_delta": 1.0,
+      "visible_width_delta": 3,
+      "visible_height_delta": 0,
+      "palette_total_variation": 0.15381708238851097
+    },
+    {
+      "from": "south",
+      "to": "southwest",
+      "head_anchor_dx": 0.9652996845425861,
+      "torso_anchor_dx": 0.590861423220975,
+      "foot_axis_dx": 0.0,
+      "head_foot_axis_offset_delta": 1.0,
+      "visible_width_delta": 2,
+      "visible_height_delta": 1,
+      "palette_total_variation": 0.13035845684852307
+    },
+    {
+      "from": "southwest",
+      "to": "west",
+      "head_anchor_dx": 0.2654695462266474,
+      "torso_anchor_dx": 0.3818589743589733,
+      "foot_axis_dx": 0.5,
+      "head_foot_axis_offset_delta": 0.0,
+      "visible_width_delta": 1,
+      "visible_height_delta": 0,
+      "palette_total_variation": 0.25693834284090655
+    },
+    {
+      "from": "west",
+      "to": "northwest",
+      "head_anchor_dx": 0.502110694183866,
+      "torso_anchor_dx": 0.29912207357859444,
+      "foot_axis_dx": 0.5,
+      "head_foot_axis_offset_delta": 0.0,
+      "visible_width_delta": 1,
+      "visible_height_delta": 1,
+      "palette_total_variation": 0.2815357871665029
+    },
+    {
+      "from": "northwest",
+      "to": "north",
+      "head_anchor_dx": 0.3286585365853689,
+      "torso_anchor_dx": 0.9993291305334395,
+      "foot_axis_dx": 0.5,
+      "head_foot_axis_offset_delta": 1.0,
+      "visible_width_delta": 1,
+      "visible_height_delta": 1,
+      "palette_total_variation": 0.20086958669927618
+    }
+  ],
+  "summary": {
+    "max_head_anchor_dx": 1.1888797279192005,
+    "max_torso_anchor_dx": 0.9993291305334395,
+    "max_foot_axis_dx": 0.5,
+    "max_head_foot_axis_offset_delta": 1.0,
+    "head_foot_axis_offset_spread": 2.5,
+    "max_visible_width_delta": 3,
+    "max_visible_height_delta": 2,
+    "max_palette_total_variation": 0.3449282615949283
+  }
+}

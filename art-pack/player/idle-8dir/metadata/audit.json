@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "tool": "create-topdown-8dir-sprites.build",
+  "tool_version": "2.0.0",
+  "verdict": "pass",
+  "artifact": {
+    "sheet_sha256": "b0ba5df64e7ed5882917e91a8ceaa0b071556f03bec2eb80b5a1e20145cb7c00",
+    "manifest_sha256": "b93e6e226df3f81d1a9aebca3f22cf711c3746f6f72406166f0b4ead5cd240ea"
+  },
+  "checks": {
+    "frame_count_8": true,
+    "canonical_direction_order": true,
+    "sheet_size": true,
+    "all_frames_requested_size": true,
+    "all_frames_nonempty": true,
+    "binary_alpha": true,
+    "palette_within_limit": true,
+    "all_contacts_match": true,
+    "all_heights_within_tolerance": true,
+    "no_post_recovery_resampling": true,
+    "foot_axes_aligned": true,
+    "adjacent_head_anchor_shift_bounded": true,
+    "adjacent_torso_anchor_shift_bounded": true,
+    "adjacent_palette_transition_bounded": true,
+    "head_foot_axis_offset_spread_bounded": true,
+    "recovery_grids_bounded": true
+  },
+  "facts": {
+    "visible_heights": [
+      51,
+      53,
+      52,
+      52,
+      52,
+      51,
+      51,
+      52
+    ],
+    "visible_height_spread": 2,
+    "contacts": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "selected_requested_grids": [
+      [
+        64,
+        64
+      ],
+      [
+        69,
+        69
+      ],
+      [
+        64,
+        64
+      ],
+      [
+        66,
+        66
+      ],
+      [
+        64,
+        64
+      ],
+      [
+        64,
+        64
+      ],
+      [
+        65,
+        65
+      ],
+      [
+        64,
+        64
+      ]
+    ],
+    "selected_refined_grids": [
+      [
+        62,
+        63
+      ],
+      [
+        70,
+        69
+      ],
+      [
+        63,
+        63
+      ],
+      [
+        66,
+        66
+      ],
+      [
+        62,
+        62
+      ],
+      [
+        63,
+        62
+      ],
+      [
+        66,
+        66
+      ],
+      [
+        62,
+        63
+      ]
+    ],
+    "palette_reference": "south",
+    "target_axis_x": 31.5,
+    "continuity": {
+      "max_head_anchor_dx": 1.1888797279192005,
+      "max_torso_anchor_dx": 0.9993291305334395,
+      "max_foot_axis_dx": 0.5,
+      "max_head_foot_axis_offset_delta": 1.0,
+      "head_foot_axis_offset_spread": 2.5,
+      "max_visible_width_delta": 3,
+      "max_visible_height_delta": 2,
+      "max_palette_total_variation": 0.3449282615949283
+    },
+    "continuity_thresholds": {
+      "axis_tolerance": 0.5,
+      "max_adjacent_head_shift": 2.5,
+      "max_adjacent_torso_shift": 2.0,
+      "max_adjacent_palette_tv": 0.45,
+      "max_head_foot_offset_spread": 2.5
+    },
+    "visible_palette_colors": 32,
+    "fully_transparent_pixels": 26734,
+    "fully_opaque_pixels": 6034,
+    "partially_transparent_pixels": 0
+  }
+}

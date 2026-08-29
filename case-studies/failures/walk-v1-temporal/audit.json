@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "tool": "create-fixed-direction-action-sprites.build",
+  "tool_version": "1.0.0",
+  "verdict": "pass",
+  "artifact": {
+    "sheet_sha256": "95a9d7ea54097b0ab939241d42b2336b906f2d005255873b1e89baff1c8125cc",
+    "manifest_sha256": "e3d619d407e2596ac1b944a0aa0be95f794e41ce158c200840d7c6f3b6d94336"
+  },
+  "checks": {
+    "frame_count": true,
+    "sheet_size": true,
+    "all_frames_requested_size": true,
+    "all_frames_nonempty": true,
+    "binary_alpha": true,
+    "palette_within_limit": true,
+    "all_contacts_match": true,
+    "height_profile_within_tolerance": true,
+    "foot_axes_aligned": true,
+    "no_post_recovery_resampling": true,
+    "no_exact_duplicate_frames": true,
+    "adjacent_phase_change_minimum": true,
+    "adjacent_phase_change_bounded": true,
+    "adjacent_head_shift_bounded": true,
+    "adjacent_torso_shift_bounded": true,
+    "adjacent_palette_transition_bounded": true,
+    "contact_frames_declared": true
+  },
+  "facts": {
+    "phase_order": [
+      "left-contact",
+      "left-recoil",
+      "passing-right",
+      "right-contact",
+      "right-recoil",
+      "passing-left"
+    ],
+    "visible_heights": [
+      51,
+      51,
+      53,
+      52,
+      52,
+      53
+    ],
+    "contacts": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "foot_axes": [
+      31.5,
+      32.0,
+      31.5,
+      31.5,
+      32.0,
+      31.5
+    ],
+    "unique_frame_hashes": 6,
+    "visible_palette_colors": 32,
+    "partially_transparent_pixels": 0,
+    "temporal": {
+      "min_silhouette_change": 0.049939098660170524,
+      "max_silhouette_change": 0.2033898305084746,
+      "closure_silhouette_change": 0.2033898305084746,
+      "max_head_anchor_dx": 1.0357742537313435,
+      "max_torso_anchor_dx": 1.0120806255831774,
+      "max_foot_axis_dx": 0.5,
+      "max_visible_height_delta": 2,
+      "max_palette_total_variation": 0.13024432714806553
+    },
+    "thresholds": {
+      "axis_tolerance": 0.5,
+      "min_adjacent_silhouette_change": 0.02,
+      "max_adjacent_silhouette_change": 0.5,
+      "max_adjacent_head_shift": 2.0,
+      "max_adjacent_torso_shift": 2.0,
+      "max_adjacent_palette_tv": 0.4
+    }
+  }
+}

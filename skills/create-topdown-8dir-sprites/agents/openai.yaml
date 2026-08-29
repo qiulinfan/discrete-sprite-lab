@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Top-Down 8-View Sprites"
+  short_description: "Build rotation-continuous eight-direction pixel characters"
+  default_prompt: "Use $create-topdown-8dir-sprites to create a rotation-continuous top-down eight-direction pixel character set."

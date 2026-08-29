@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "source": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved",
+  "records": [
+    {
+      "frame_index": 0,
+      "phase_id": "left-contact",
+      "path": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-00.png",
+      "sha256": "4b23e2067c00f8bc7cc9fb763414566217bd6f4ecdc5d3b4429c256486a61c8b",
+      "rgba_sha256": "79a4752be6971f52fdb02e1b05e061fa65205c7d803b4840009a3aad7a314d9d",
+      "receipt": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-00.receipt.json",
+      "receipt_sha256": "7d0e15d343738f1c4b2677e11dc21f0e454ce48417524370963d1675fc41f58c"
+    },
+    {
+      "frame_index": 1,
+      "phase_id": "left-recoil",
+      "path": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-01.png",
+      "sha256": "e312ec5e20973859b41e695f89b09863e346f91eee54157d3b0e6dc7beba6873",
+      "rgba_sha256": "d9dafc113c15bb01ab0c366014d5ff32e19042b36df3322d8b5085fc45f9efb0",
+      "receipt": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-01.receipt.json",
+      "receipt_sha256": "62c1dc16b8e8ca411bbff40cb291d10ca865e8b00af6117a9176d0fb00603fed"
+    },
+    {
+      "frame_index": 2,
+      "phase_id": "passing-right",
+      "path": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-02.png",
+      "sha256": "ce4777ac36166dafc0d84408e2671f1877d5bc9b6676192025a1a108f42b3bcb",
+      "rgba_sha256": "f39099310f346bf3679e573085fac2cec2271c0b3b245b6f3c24f25b43fbc55f",
+      "receipt": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-02.receipt.json",
+      "receipt_sha256": "ef83d4bd28399a86e3418bc8e3dea1d89bd100f93445fc4e5ebcb3e75b55fc2d"
+    },
+    {
+      "frame_index": 3,
+      "phase_id": "right-contact",
+      "path": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-03.png",
+      "sha256": "8e12de47544ce51537b38fd4d3dbe72fc15a86766f59d52de330e8535929822f",
+      "rgba_sha256": "b00e91d4931523e22a8df4b34bfe65bfc4e50cde5ac817fededd2a8f0e5b2f68",
+      "receipt": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-03.receipt.json",
+      "receipt_sha256": "9d3846321e73909e2bcb1f9e686c9df119e61071f9fb8b2d0a2dc3dadd514b6d"
+    },
+    {
+      "frame_index": 4,
+      "phase_id": "right-recoil",
+      "path": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-04.png",
+      "sha256": "22bb0a22f803ca5d401418889e1bb46d3910fe27fc2385c84701f1616ea47b84",
+      "rgba_sha256": "7a80d68d957e45e315f590c1742f9bc37b454320c8695e5ca14c0e680743cbc8",
+      "receipt": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-04.receipt.json",
+      "receipt_sha256": "1b5ef58d113e82905ac225080bddd068b922a59096c756c771ba2ba99f0caea2"
+    },
+    {
+      "frame_index": 5,
+      "phase_id": "passing-left",
+      "path": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-05.png",
+      "sha256": "4f0ad78ed3f26caece95cdaa15831265f3d7a536629114b0b72ba235c0be19c5",
+      "rgba_sha256": "1d6d1dae839ae12deaa0b008144d9e91491de7e447df885f0e81532487f9f486",
+      "receipt": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/source/logical-overrides/approved/frame-05.receipt.json",
+      "receipt_sha256": "ea97865a77df270fe58828e4701cfec79ed4cd3a7072d7bb66e4fea7314cad54"
+    }
+  ]
+}

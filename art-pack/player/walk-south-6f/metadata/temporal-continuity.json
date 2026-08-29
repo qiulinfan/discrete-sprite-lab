@@ -1,0 +1,450 @@
+{
+  "schema_version": 1,
+  "phase_order": [
+    "left-contact",
+    "left-recoil",
+    "passing-right",
+    "right-contact",
+    "right-recoil",
+    "passing-left"
+  ],
+  "frames": [
+    {
+      "alpha_bbox": [
+        20,
+        9,
+        43,
+        61
+      ],
+      "visible_width": 23,
+      "visible_height": 52,
+      "alpha_centroid_x": 31.18362282878412,
+      "head": {
+        "centroid_x": 31.0,
+        "extent_mid_x": 31.0,
+        "bbox": [
+          20,
+          9,
+          43,
+          29
+        ],
+        "visible_pixels": 360
+      },
+      "torso": {
+        "centroid_x": 31.281345565749234,
+        "extent_mid_x": 31.5,
+        "bbox": [
+          22,
+          27,
+          42,
+          46
+        ],
+        "visible_pixels": 327
+      },
+      "feet": {
+        "centroid_x": 33.72727272727273,
+        "extent_mid_x": 33.5,
+        "bbox": [
+          31,
+          59,
+          37,
+          61
+        ],
+        "visible_pixels": 11
+      },
+      "phase_id": "left-contact",
+      "unique_palette_colors": 32
+    },
+    {
+      "alpha_bbox": [
+        20,
+        10,
+        43,
+        61
+      ],
+      "visible_width": 23,
+      "visible_height": 51,
+      "alpha_centroid_x": 31.46284224250326,
+      "head": {
+        "centroid_x": 31.0,
+        "extent_mid_x": 31.0,
+        "bbox": [
+          20,
+          10,
+          43,
+          29
+        ],
+        "visible_pixels": 347
+      },
+      "torso": {
+        "centroid_x": 31.726708074534162,
+        "extent_mid_x": 31.5,
+        "bbox": [
+          22,
+          28,
+          42,
+          47
+        ],
+        "visible_pixels": 322
+      },
+      "feet": {
+        "centroid_x": 34.27272727272727,
+        "extent_mid_x": 34.5,
+        "bbox": [
+          32,
+          59,
+          38,
+          61
+        ],
+        "visible_pixels": 11
+      },
+      "phase_id": "left-recoil",
+      "unique_palette_colors": 32
+    },
+    {
+      "alpha_bbox": [
+        20,
+        8,
+        43,
+        61
+      ],
+      "visible_width": 23,
+      "visible_height": 53,
+      "alpha_centroid_x": 31.391356542617046,
+      "head": {
+        "centroid_x": 31.0,
+        "extent_mid_x": 31.0,
+        "bbox": [
+          20,
+          8,
+          43,
+          28
+        ],
+        "visible_pixels": 360
+      },
+      "torso": {
+        "centroid_x": 31.915151515151514,
+        "extent_mid_x": 32.0,
+        "bbox": [
+          22,
+          27,
+          43,
+          46
+        ],
+        "visible_pixels": 330
+      },
+      "feet": {
+        "centroid_x": 32.46666666666667,
+        "extent_mid_x": 31.5,
+        "bbox": [
+          26,
+          59,
+          38,
+          61
+        ],
+        "visible_pixels": 15
+      },
+      "phase_id": "passing-right",
+      "unique_palette_colors": 32
+    },
+    {
+      "alpha_bbox": [
+        20,
+        10,
+        43,
+        61
+      ],
+      "visible_width": 23,
+      "visible_height": 51,
+      "alpha_centroid_x": 31.38680465717982,
+      "head": {
+        "centroid_x": 31.0,
+        "extent_mid_x": 31.0,
+        "bbox": [
+          20,
+          10,
+          43,
+          29
+        ],
+        "visible_pixels": 347
+      },
+      "torso": {
+        "centroid_x": 31.932515337423315,
+        "extent_mid_x": 32.0,
+        "bbox": [
+          22,
+          28,
+          43,
+          47
+        ],
+        "visible_pixels": 326
+      },
+      "feet": {
+        "centroid_x": 28.727272727272727,
+        "extent_mid_x": 28.5,
+        "bbox": [
+          26,
+          59,
+          32,
+          61
+        ],
+        "visible_pixels": 11
+      },
+      "phase_id": "right-contact",
+      "unique_palette_colors": 31
+    },
+    {
+      "alpha_bbox": [
+        20,
+        9,
+        43,
+        61
+      ],
+      "visible_width": 23,
+      "visible_height": 52,
+      "alpha_centroid_x": 31.333759590792837,
+      "head": {
+        "centroid_x": 31.0,
+        "extent_mid_x": 31.0,
+        "bbox": [
+          20,
+          9,
+          43,
+          29
+        ],
+        "visible_pixels": 360
+      },
+      "torso": {
+        "centroid_x": 31.793846153846154,
+        "extent_mid_x": 31.5,
+        "bbox": [
+          22,
+          27,
+          42,
+          46
+        ],
+        "visible_pixels": 325
+      },
+      "feet": {
+        "centroid_x": 28.5,
+        "extent_mid_x": 28.5,
+        "bbox": [
+          26,
+          59,
+          32,
+          61
+        ],
+        "visible_pixels": 10
+      },
+      "phase_id": "right-recoil",
+      "unique_palette_colors": 32
+    },
+    {
+      "alpha_bbox": [
+        20,
+        8,
+        43,
+        61
+      ],
+      "visible_width": 23,
+      "visible_height": 53,
+      "alpha_centroid_x": 31.257178526841447,
+      "head": {
+        "centroid_x": 31.0,
+        "extent_mid_x": 31.0,
+        "bbox": [
+          20,
+          8,
+          43,
+          28
+        ],
+        "visible_pixels": 360
+      },
+      "torso": {
+        "centroid_x": 31.71212121212121,
+        "extent_mid_x": 31.5,
+        "bbox": [
+          22,
+          27,
+          42,
+          46
+        ],
+        "visible_pixels": 330
+      },
+      "feet": {
+        "centroid_x": 29.0,
+        "extent_mid_x": 29.0,
+        "bbox": [
+          27,
+          59,
+          32,
+          61
+        ],
+        "visible_pixels": 8
+      },
+      "phase_id": "passing-left",
+      "unique_palette_colors": 32
+    }
+  ],
+  "transitions": [
+    {
+      "from": "left-contact",
+      "to": "left-recoil",
+      "cyclic_closure": false,
+      "silhouette_change": 0.10024154589371981,
+      "motion_silhouette_change": 0.10024154589371981,
+      "head_anchor_dx": 0.0,
+      "torso_anchor_dx": 0.4453625087849282,
+      "identity_anchor_dx": 0.4453625087849282,
+      "foot_axis_dx": 1.0,
+      "visible_height_delta": 1,
+      "palette_total_variation": 0.09170627076586617
+    },
+    {
+      "from": "left-recoil",
+      "to": "passing-right",
+      "cyclic_closure": false,
+      "silhouette_change": 0.14385150812064965,
+      "motion_silhouette_change": 0.14385150812064965,
+      "head_anchor_dx": 0.0,
+      "torso_anchor_dx": 0.18844344061735185,
+      "identity_anchor_dx": 0.18844344061735185,
+      "foot_axis_dx": 3.0,
+      "visible_height_delta": 2,
+      "palette_total_variation": 0.1047141151114944
+    },
+    {
+      "from": "passing-right",
+      "to": "right-contact",
+      "cyclic_closure": false,
+      "silhouette_change": 0.18940248027057496,
+      "motion_silhouette_change": 0.18940248027057496,
+      "head_anchor_dx": 0.0,
+      "torso_anchor_dx": 0.017363822271800444,
+      "identity_anchor_dx": 0.017363822271800444,
+      "foot_axis_dx": 3.0,
+      "visible_height_delta": 2,
+      "palette_total_variation": 0.07761655761916668
+    },
+    {
+      "from": "right-contact",
+      "to": "right-recoil",
+      "cyclic_closure": false,
+      "silhouette_change": 0.06832298136645963,
+      "motion_silhouette_change": 0.06832298136645963,
+      "head_anchor_dx": 0.0,
+      "torso_anchor_dx": 0.13866918357716074,
+      "identity_anchor_dx": 0.13866918357716074,
+      "foot_axis_dx": 0.0,
+      "visible_height_delta": 1,
+      "palette_total_variation": 0.055574488077474074
+    },
+    {
+      "from": "right-recoil",
+      "to": "passing-left",
+      "cyclic_closure": false,
+      "silhouette_change": 0.09735576923076923,
+      "motion_silhouette_change": 0.09735576923076923,
+      "head_anchor_dx": 0.0,
+      "torso_anchor_dx": 0.08172494172494282,
+      "identity_anchor_dx": 0.08172494172494282,
+      "foot_axis_dx": 0.5,
+      "visible_height_delta": 1,
+      "palette_total_variation": 0.07502610228263264
+    },
+    {
+      "from": "passing-left",
+      "to": "left-contact",
+      "cyclic_closure": true,
+      "silhouette_change": 0.13356562137049943,
+      "motion_silhouette_change": 0.13356562137049943,
+      "head_anchor_dx": 0.0,
+      "torso_anchor_dx": 0.43077564637197696,
+      "identity_anchor_dx": 0.43077564637197696,
+      "foot_axis_dx": 4.5,
+      "visible_height_delta": 1,
+      "palette_total_variation": 0.08979780237482304
+    }
+  ],
+  "summary": {
+    "min_silhouette_change": 0.06832298136645963,
+    "max_silhouette_change": 0.18940248027057496,
+    "closure_silhouette_change": 0.13356562137049943,
+    "max_head_anchor_dx": 0.0,
+    "max_torso_anchor_dx": 0.4453625087849282,
+    "max_identity_anchor_dx": 0.4453625087849282,
+    "max_foot_axis_dx": 4.5,
+    "max_visible_height_delta": 2,
+    "max_palette_total_variation": 0.1047141151114944,
+    "min_motion_silhouette_change": 0.06832298136645963,
+    "max_motion_silhouette_change": 0.18940248027057496
+  },
+  "paired_transitions": {
+    "pairs": [
+      {
+        "transition_indices": [
+          0,
+          3
+        ],
+        "from_to": [
+          [
+            "left-contact",
+            "left-recoil"
+          ],
+          [
+            "right-contact",
+            "right-recoil"
+          ]
+        ],
+        "motion_silhouette_change": [
+          0.10024154589371981,
+          0.06832298136645963
+        ],
+        "ratio": 1.4671717171717171
+      },
+      {
+        "transition_indices": [
+          1,
+          4
+        ],
+        "from_to": [
+          [
+            "left-recoil",
+            "passing-right"
+          ],
+          [
+            "right-recoil",
+            "passing-left"
+          ]
+        ],
+        "motion_silhouette_change": [
+          0.14385150812064965,
+          0.09735576923076923
+        ],
+        "ratio": 1.4775858611898827
+      },
+      {
+        "transition_indices": [
+          2,
+          5
+        ],
+        "from_to": [
+          [
+            "passing-right",
+            "right-contact"
+          ],
+          [
+            "passing-left",
+            "left-contact"
+          ]
+        ],
+        "motion_silhouette_change": [
+          0.18940248027057496,
+          0.13356562137049943
+        ],
+        "ratio": 1.418048134895348
+      }
+    ],
+    "max_ratio": 1.4775858611898827
+  }
+}

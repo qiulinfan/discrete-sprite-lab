@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "review_type": "magnified-logical-pixel-anatomy",
+  "review_scale": 16,
+  "render_size_px": [
+    1024,
+    1024
+  ],
+  "resample": "nearest",
+  "artifact_sheet_sha256": "94939659f104cc29128e61bc67cc245a0040b01fee3c35e818cc0461dbae577d",
+  "verdict": "fail",
+  "stages": {
+    "high_detail": {
+      "verdict": "fail",
+      "reason": "No independently generated and approved high-detail anatomy sources exist for this shortcut experiment."
+    },
+    "pseudo_pixel": {
+      "verdict": "fail",
+      "reason": "The sources are nearest-neighbor enlargements of already recovered logical frames, not reviewed high-resolution pseudo-pixel paintings."
+    },
+    "logical_frames": {
+      "verdict": "fail",
+      "reviewed_frame_count": 6,
+      "review_scale": 16
+    },
+    "loop": {
+      "verdict": "fail",
+      "reason": "Symmetric cadence repeats the same malformed anatomy in the opposite half-cycle."
+    }
+  },
+  "failures": [
+    "Detached or missing arm topology in frames 01, 02, 04, and 05.",
+    "Broad rectangular overlay cuts articulating shoulder, waist, hip, and leg connections.",
+    "Raster mirroring reproduces deformation while passing cadence metrics."
+  ],
+  "review_principle": "Technical pixel metrics cannot approve semantic anatomy. Every logical frame must be inspected individually at a size where an agent can reason about local pixel topology.",
+  "frames": [
+    {
+      "index": 0,
+      "path": "evidence/magnified-final-16x/frame-00-16x.png",
+      "verdict": "fail",
+      "failures": [
+        "Both arm attachments are compressed into short blocks with weak shoulder-to-hand continuity.",
+        "The broad central overlay creates a visible structural seam at the waist and hip."
+      ]
+    },
+    {
+      "index": 1,
+      "path": "evidence/magnified-final-16x/frame-01-16x.png",
+      "verdict": "fail",
+      "failures": [
+        "The screen-right swing arm is an oversized detached cluster; shoulder, elbow, cuff, and hand cannot be parsed as one limb.",
+        "The opposite arm is almost absent.",
+        "The rear leg terminates in a disconnected dark block."
+      ]
+    },
+    {
+      "index": 2,
+      "path": "evidence/magnified-final-16x/frame-02-16x.png",
+      "verdict": "fail",
+      "failures": [
+        "The screen-left hand is attached to the skirt edge rather than a readable forearm.",
+        "The screen-right arm disappears into the torso.",
+        "The thighs and skirt center collapse into an ambiguous single column."
+      ]
+    },
+    {
+      "index": 3,
+      "path": "evidence/magnified-final-16x/frame-03-16x.png",
+      "verdict": "fail",
+      "failures": [
+        "The mirrored arm cluster remains anatomically disconnected.",
+        "The hip-to-leg seam is visibly composited."
+      ]
+    },
+    {
+      "index": 4,
+      "path": "evidence/magnified-final-16x/frame-04-16x.png",
+      "verdict": "fail",
+      "failures": [
+        "The screen-left swing arm repeats frame 1's oversized detached cluster.",
+        "The opposite arm and rear boot lose readable topology."
+      ]
+    },
+    {
+      "index": 5,
+      "path": "evidence/magnified-final-16x/frame-05-16x.png",
+      "verdict": "fail",
+      "failures": [
+        "The screen-right hand floats beside the skirt without a coherent forearm.",
+        "One arm disappears into the torso and the rear leg reads as a detached appendage."
+      ]
+    }
+  ],
+  "root_cause": [
+    "No independently approved high-detail anatomy source exists for this V2 experiment.",
+    "A broad rectangular identity overlay crosses articulating body boundaries.",
+    "Mirroring recovered raster motion preserves numeric symmetry but cannot reason about anatomy, occlusion, or lighting."
+  ],
+  "required_replacement": "Return to separately generated complete frames, validate anatomy in fine image space, recover logical pixels, then use agent-approved local semantic pixel patches with exact script execution."
+}

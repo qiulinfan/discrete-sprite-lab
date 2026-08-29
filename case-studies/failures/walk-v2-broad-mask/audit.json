@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "tool": "create-fixed-direction-action-sprites.build",
+  "tool_version": "3.0.0",
+  "verdict": "fail",
+  "technical_verdict": "pass",
+  "visual_review": {
+    "status": "provided",
+    "path": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-temporal-locked-64-v2/evidence/visual-anatomy-review.json",
+    "sha256": "2c173bfadfbd8774603e701882e906cd8cde0d126db2ca4729a1f2fb4ee00e37",
+    "verdict": "fail",
+    "stages": {
+      "high_detail": {
+        "verdict": "fail",
+        "reason": "No independently generated and approved high-detail anatomy sources exist for this shortcut experiment."
+      },
+      "pseudo_pixel": {
+        "verdict": "fail",
+        "reason": "The sources are nearest-neighbor enlargements of already recovered logical frames, not reviewed high-resolution pseudo-pixel paintings."
+      },
+      "logical_frames": {
+        "verdict": "fail",
+        "reviewed_frame_count": 6,
+        "review_scale": 16
+      },
+      "loop": {
+        "verdict": "fail",
+        "reason": "Symmetric cadence repeats the same malformed anatomy in the opposite half-cycle."
+      }
+    },
+    "failures": [
+      "Detached or missing arm topology in frames 01, 02, 04, and 05.",
+      "Broad rectangular overlay cuts articulating shoulder, waist, hip, and leg connections.",
+      "Raster mirroring reproduces deformation while passing cadence metrics."
+    ]
+  },
+  "artifact": {
+    "sheet_sha256": "94939659f104cc29128e61bc67cc245a0040b01fee3c35e818cc0461dbae577d",
+    "manifest_sha256": "1b9a2e399c2fc8838a7796fd708a95dc6db6f86522d4379b6d1e8769d51eb641"
+  },
+  "checks": {
+    "frame_count": true,
+    "sheet_size": true,
+    "all_frames_requested_size": true,
+    "all_frames_nonempty": true,
+    "binary_alpha": true,
+    "palette_within_limit": true,
+    "all_contacts_match": true,
+    "height_profile_within_tolerance": true,
+    "foot_axes_aligned": true,
+    "no_post_recovery_resampling": true,
+    "no_exact_duplicate_frames": true,
+    "adjacent_phase_change_minimum": true,
+    "adjacent_phase_change_bounded": true,
+    "adjacent_head_shift_bounded": true,
+    "adjacent_stable_anchor_shift_bounded": true,
+    "adjacent_palette_transition_bounded": true,
+    "contact_frames_declared": true,
+    "shared_refined_grid": true,
+    "identity_lock_exact": true,
+    "paired_phase_heights_match": true,
+    "paired_transition_cadence": true
+  },
+  "facts": {
+    "phase_order": [
+      "left-contact",
+      "left-recoil",
+      "passing-right",
+      "right-contact",
+      "right-recoil",
+      "passing-left"
+    ],
+    "visible_heights": [
+      52,
+      51,
+      53,
+      52,
+      51,
+      53
+    ],
+    "contacts": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "foot_axes": [
+      31.5,
+      32.0,
+      31.5,
+      31.5,
+      31.0,
+      31.5
+    ],
+    "unique_frame_hashes": 6,
+    "visible_palette_colors": 32,
+    "partially_transparent_pixels": 0,
+    "temporal": {
+      "min_silhouette_change": 0.25077720207253884,
+      "max_silhouette_change": 0.2949640287769784,
+      "closure_silhouette_change": 0.25077720207253884,
+      "max_head_anchor_dx": 0.0,
+      "max_torso_anchor_dx": 3.3128491620111724,
+      "max_identity_anchor_dx": 0.02206395754782875,
+      "max_foot_axis_dx": 0.5,
+      "max_visible_height_delta": 2,
+      "max_palette_total_variation": 0.06566573311714292,
+      "min_motion_silhouette_change": 0.6633663366336634,
+      "max_motion_silhouette_change": 0.7062706270627063
+    },
+    "refined_grids": [
+      [
+        64,
+        64
+      ],
+      [
+        64,
+        64
+      ],
+      [
+        64,
+        64
+      ],
+      [
+        64,
+        64
+      ],
+      [
+        64,
+        64
+      ],
+      [
+        64,
+        64
+      ]
+    ],
+    "shared_refined_grid": true,
+    "identity_lock": {
+      "enabled": true,
+      "max_mismatched_pixels": 0
+    },
+    "phase_pairs": {
+      "pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "height_deltas": [
+        0,
+        0,
+        0
+      ],
+      "max_height_delta": 0
+    },
+    "paired_transitions": {
+      "pairs": [
+        {
+          "transition_indices": [
+            0,
+            3
+          ],
+          "from_to": [
+            [
+              "left-contact",
+              "left-recoil"
+            ],
+            [
+              "right-contact",
+              "right-recoil"
+            ]
+          ],
+          "motion_silhouette_change": [
+            0.6971608832807571,
+            0.6971608832807571
+          ],
+          "ratio": 1.0
+        },
+        {
+          "transition_indices": [
+            1,
+            4
+          ],
+          "from_to": [
+            [
+              "left-recoil",
+              "passing-right"
+            ],
+            [
+              "right-recoil",
+              "passing-left"
+            ]
+          ],
+          "motion_silhouette_change": [
+            0.7062706270627063,
+            0.7062706270627063
+          ],
+          "ratio": 1.0
+        },
+        {
+          "transition_indices": [
+            2,
+            5
+          ],
+          "from_to": [
+            [
+              "passing-right",
+              "right-contact"
+            ],
+            [
+              "passing-left",
+              "left-contact"
+            ]
+          ],
+          "motion_silhouette_change": [
+            0.6633663366336634,
+            0.6633663366336634
+          ],
+          "ratio": 1.0
+        }
+      ],
+      "max_ratio": 1.0
+    },
+    "thresholds": {
+      "axis_tolerance": 0.5,
+      "min_adjacent_silhouette_change": 0.02,
+      "max_adjacent_silhouette_change": 0.5,
+      "max_adjacent_head_shift": 2.0,
+      "max_adjacent_torso_shift": 2.0,
+      "max_adjacent_palette_tv": 0.4,
+      "max_paired_transition_ratio": 1.1,
+      "max_paired_height_delta": 0
+    }
+  }
+}

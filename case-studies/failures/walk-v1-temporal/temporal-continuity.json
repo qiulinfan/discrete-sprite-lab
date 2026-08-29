@@ -1,0 +1,367 @@
+{
+  "schema_version": 1,
+  "phase_order": [
+    "left-contact",
+    "left-recoil",
+    "passing-right",
+    "right-contact",
+    "right-recoil",
+    "passing-left"
+  ],
+  "frames": [
+    {
+      "alpha_bbox": [
+        21,
+        10,
+        43,
+        61
+      ],
+      "visible_width": 22,
+      "visible_height": 51,
+      "alpha_centroid_x": 31.235294117647058,
+      "head": {
+        "centroid_x": 30.934375,
+        "extent_mid_x": 31.0,
+        "bbox": [
+          21,
+          10,
+          42,
+          29
+        ],
+        "visible_pixels": 320
+      },
+      "torso": {
+        "centroid_x": 31.391930835734872,
+        "extent_mid_x": 31.5,
+        "bbox": [
+          21,
+          28,
+          43,
+          47
+        ],
+        "visible_pixels": 347
+      },
+      "feet": {
+        "centroid_x": 31.768421052631577,
+        "extent_mid_x": 31.5,
+        "bbox": [
+          26,
+          51,
+          38,
+          61
+        ],
+        "visible_pixels": 95
+      },
+      "phase_id": "left-contact",
+      "unique_palette_colors": 31
+    },
+    {
+      "alpha_bbox": [
+        22,
+        10,
+        44,
+        61
+      ],
+      "visible_width": 22,
+      "visible_height": 51,
+      "alpha_centroid_x": 32.12276214833759,
+      "head": {
+        "centroid_x": 31.928571428571427,
+        "extent_mid_x": 32.0,
+        "bbox": [
+          22,
+          10,
+          43,
+          29
+        ],
+        "visible_pixels": 322
+      },
+      "torso": {
+        "centroid_x": 32.40401146131805,
+        "extent_mid_x": 32.5,
+        "bbox": [
+          22,
+          28,
+          44,
+          47
+        ],
+        "visible_pixels": 349
+      },
+      "feet": {
+        "centroid_x": 31.50632911392405,
+        "extent_mid_x": 32.0,
+        "bbox": [
+          27,
+          51,
+          38,
+          61
+        ],
+        "visible_pixels": 79
+      },
+      "phase_id": "left-recoil",
+      "unique_palette_colors": 32
+    },
+    {
+      "alpha_bbox": [
+        21,
+        8,
+        44,
+        61
+      ],
+      "visible_width": 23,
+      "visible_height": 53,
+      "alpha_centroid_x": 31.98661800486618,
+      "head": {
+        "centroid_x": 31.728323699421967,
+        "extent_mid_x": 31.5,
+        "bbox": [
+          21,
+          8,
+          43,
+          28
+        ],
+        "visible_pixels": 346
+      },
+      "torso": {
+        "centroid_x": 32.02832861189802,
+        "extent_mid_x": 32.5,
+        "bbox": [
+          22,
+          27,
+          44,
+          46
+        ],
+        "visible_pixels": 353
+      },
+      "feet": {
+        "centroid_x": 32.8876404494382,
+        "extent_mid_x": 31.5,
+        "bbox": [
+          26,
+          50,
+          38,
+          61
+        ],
+        "visible_pixels": 89
+      },
+      "phase_id": "passing-right",
+      "unique_palette_colors": 32
+    },
+    {
+      "alpha_bbox": [
+        21,
+        9,
+        44,
+        61
+      ],
+      "visible_width": 23,
+      "visible_height": 52,
+      "alpha_centroid_x": 31.952147239263805,
+      "head": {
+        "centroid_x": 32.25588235294118,
+        "extent_mid_x": 32.0,
+        "bbox": [
+          22,
+          9,
+          43,
+          29
+        ],
+        "visible_pixels": 340
+      },
+      "torso": {
+        "centroid_x": 32.05833333333333,
+        "extent_mid_x": 32.0,
+        "bbox": [
+          21,
+          27,
+          44,
+          46
+        ],
+        "visible_pixels": 360
+      },
+      "feet": {
+        "centroid_x": 30.337349397590362,
+        "extent_mid_x": 31.5,
+        "bbox": [
+          26,
+          51,
+          38,
+          61
+        ],
+        "visible_pixels": 83
+      },
+      "phase_id": "right-contact",
+      "unique_palette_colors": 32
+    },
+    {
+      "alpha_bbox": [
+        22,
+        9,
+        44,
+        61
+      ],
+      "visible_width": 22,
+      "visible_height": 52,
+      "alpha_centroid_x": 31.956743002544528,
+      "head": {
+        "centroid_x": 32.05421686746988,
+        "extent_mid_x": 32.0,
+        "bbox": [
+          22,
+          9,
+          43,
+          29
+        ],
+        "visible_pixels": 332
+      },
+      "torso": {
+        "centroid_x": 32.078034682080926,
+        "extent_mid_x": 32.5,
+        "bbox": [
+          22,
+          27,
+          44,
+          46
+        ],
+        "visible_pixels": 346
+      },
+      "feet": {
+        "centroid_x": 30.68918918918919,
+        "extent_mid_x": 32.0,
+        "bbox": [
+          26,
+          51,
+          39,
+          61
+        ],
+        "visible_pixels": 74
+      },
+      "phase_id": "right-recoil",
+      "unique_palette_colors": 30
+    },
+    {
+      "alpha_bbox": [
+        22,
+        8,
+        43,
+        61
+      ],
+      "visible_width": 21,
+      "visible_height": 53,
+      "alpha_centroid_x": 31.781289506953225,
+      "head": {
+        "centroid_x": 31.970149253731343,
+        "extent_mid_x": 32.0,
+        "bbox": [
+          22,
+          8,
+          43,
+          28
+        ],
+        "visible_pixels": 335
+      },
+      "torso": {
+        "centroid_x": 31.96820809248555,
+        "extent_mid_x": 32.0,
+        "bbox": [
+          22,
+          27,
+          43,
+          46
+        ],
+        "visible_pixels": 346
+      },
+      "feet": {
+        "centroid_x": 30.19753086419753,
+        "extent_mid_x": 31.5,
+        "bbox": [
+          26,
+          50,
+          38,
+          61
+        ],
+        "visible_pixels": 81
+      },
+      "phase_id": "passing-left",
+      "unique_palette_colors": 31
+    }
+  ],
+  "transitions": [
+    {
+      "from": "left-contact",
+      "to": "left-recoil",
+      "cyclic_closure": false,
+      "silhouette_change": 0.15087719298245614,
+      "head_anchor_dx": 0.9941964285714278,
+      "torso_anchor_dx": 1.0120806255831774,
+      "foot_axis_dx": 0.5,
+      "visible_height_delta": 0,
+      "palette_total_variation": 0.13024432714806553
+    },
+    {
+      "from": "left-recoil",
+      "to": "passing-right",
+      "cyclic_closure": false,
+      "silhouette_change": 0.14351851851851852,
+      "head_anchor_dx": 0.20024772914945999,
+      "torso_anchor_dx": 0.3756828494200306,
+      "foot_axis_dx": 0.5,
+      "visible_height_delta": 2,
+      "palette_total_variation": 0.08947361870803543
+    },
+    {
+      "from": "passing-right",
+      "to": "right-contact",
+      "cyclic_closure": false,
+      "silhouette_change": 0.1544532130777903,
+      "head_anchor_dx": 0.5275586535192112,
+      "torso_anchor_dx": 0.03000472143531141,
+      "foot_axis_dx": 0.0,
+      "visible_height_delta": 1,
+      "palette_total_variation": 0.10523188989894469
+    },
+    {
+      "from": "right-contact",
+      "to": "right-recoil",
+      "cyclic_closure": false,
+      "silhouette_change": 0.049939098660170524,
+      "head_anchor_dx": 0.20166548547129537,
+      "torso_anchor_dx": 0.01970134874759566,
+      "foot_axis_dx": 0.5,
+      "visible_height_delta": 0,
+      "palette_total_variation": 0.10897297803587319
+    },
+    {
+      "from": "right-recoil",
+      "to": "passing-left",
+      "cyclic_closure": false,
+      "silhouette_change": 0.06740196078431372,
+      "head_anchor_dx": 0.0840676137385401,
+      "torso_anchor_dx": 0.10982658959537517,
+      "foot_axis_dx": 0.5,
+      "visible_height_delta": 1,
+      "palette_total_variation": 0.09934440573500224
+    },
+    {
+      "from": "passing-left",
+      "to": "left-contact",
+      "cyclic_closure": true,
+      "silhouette_change": 0.2033898305084746,
+      "head_anchor_dx": 1.0357742537313435,
+      "torso_anchor_dx": 0.5762772567506786,
+      "foot_axis_dx": 0.0,
+      "visible_height_delta": 2,
+      "palette_total_variation": 0.10697316019233903
+    }
+  ],
+  "summary": {
+    "min_silhouette_change": 0.049939098660170524,
+    "max_silhouette_change": 0.2033898305084746,
+    "closure_silhouette_change": 0.2033898305084746,
+    "max_head_anchor_dx": 1.0357742537313435,
+    "max_torso_anchor_dx": 1.0120806255831774,
+    "max_foot_axis_dx": 0.5,
+    "max_visible_height_delta": 2,
+    "max_palette_total_variation": 0.13024432714806553
+  }
+}

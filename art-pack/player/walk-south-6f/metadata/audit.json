@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "tool": "create-fixed-direction-action-sprites.build",
+  "tool_version": "3.4.0",
+  "verdict": "pass",
+  "technical_verdict": "pass",
+  "diagnostic_verdict": "warn",
+  "diagnostics": {
+    "paired_transition_cadence": {
+      "pass": false,
+      "value": 1.4775858611898827,
+      "limit": 1.15,
+      "hard_required": false
+    }
+  },
+  "visual_review": {
+    "status": "provided",
+    "path": "source-project://Village_Rim/ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/evidence/visual-review-v3.json",
+    "sha256": "735ce6fccb90d368899bfdf27ee555a14c07c6dfb2764d45202b3a70a7c9482b",
+    "verdict": "pass",
+    "stages": {
+      "high_detail": {
+        "verdict": "pass",
+        "evidence": "evidence/high-detail-review/review.json"
+      },
+      "pseudo_pixel": {
+        "verdict": "pass",
+        "evidence": "evidence/pseudo-pixel-review/review.json"
+      },
+      "logical_frames": {
+        "verdict": "pass",
+        "reviewed_frame_count": 6,
+        "evidence": [
+          "evidence/player-black-haired-girl-walk-south-6f-64-v3-magnified-frames",
+          "evidence/local-identity-review"
+        ],
+        "notes": [
+          "Complete head and cross stable-identity patches match their canonical cells exactly in all six frames.",
+          "Patch receipts prove exact RGBA writes, transparent silhouette erasure, zero resampling, and zero change outside approved coordinates."
+        ]
+      },
+      "loop": {
+        "verdict": "pass",
+        "evidence": [
+          "evidence/player-black-haired-girl-walk-south-6f-64-v3.gif",
+          "evidence/player-black-haired-girl-walk-south-6f-64-v3-slow.gif",
+          "evidence/loop-review.html",
+          "evidence/temporal-continuity.json"
+        ],
+        "notes": [
+          "The user explicitly approved the current normal-speed and slow loops as perfect on 2026-08-29.",
+          "All six phases remain readable, cyclic, and visually coherent after stable-identity repair.",
+          "The paired silhouette-change ratios are retained as diagnostic evidence rather than treated as a perceptual verdict."
+        ]
+      }
+    },
+    "diagnostic_overrides": [
+      {
+        "id": "paired_transition_cadence",
+        "decision": "accept",
+        "authority": "user",
+        "reason": "The user judged the current normal-speed and slow loops to be visually perfect; the scalar silhouette-distance ratio does not reflect the perceived cadence of this chibi walk.",
+        "evidence": [
+          "evidence/player-black-haired-girl-walk-south-6f-64-v3.gif",
+          "evidence/player-black-haired-girl-walk-south-6f-64-v3-slow.gif",
+          "evidence/temporal-continuity.json"
+        ]
+      }
+    ],
+    "failures": []
+  },
+  "artifact": {
+    "sheet_sha256": "d0fd26fdc30fd86470ee67a1ed6e67de50bc04b3b064adfb045d98d10572981e",
+    "manifest_sha256": "ab8249f101de59865dbf008096e98ac13b1b9dffac267b2ba65e48fe21fd1b57"
+  },
+  "checks": {
+    "frame_count": true,
+    "sheet_size": true,
+    "all_frames_requested_size": true,
+    "all_frames_nonempty": true,
+    "binary_alpha": true,
+    "palette_within_limit": true,
+    "all_contacts_match": true,
+    "height_profile_within_tolerance": true,
+    "placement_axes_aligned": true,
+    "no_post_recovery_resampling": true,
+    "no_exact_duplicate_frames": true,
+    "adjacent_phase_change_minimum": true,
+    "adjacent_phase_change_bounded": true,
+    "adjacent_head_shift_bounded": true,
+    "adjacent_stable_anchor_shift_bounded": true,
+    "adjacent_palette_transition_bounded": true,
+    "contact_frames_declared": true,
+    "recovery_grid_policy_satisfied": true,
+    "identity_lock_exact": true,
+    "paired_phase_heights_match": true
+  },
+  "facts": {
+    "phase_order": [
+      "left-contact",
+      "left-recoil",
+      "passing-right",
+      "right-contact",
+      "right-recoil",
+      "passing-left"
+    ],
+    "visible_heights": [
+      52,
+      51,
+      53,
+      51,
+      52,
+      53
+    ],
+    "contacts": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "foot_axes": [
+      33.5,
+      34.5,
+      31.5,
+      28.5,
+      28.5,
+      29.0
+    ],
+    "placement_axis_mode": "body",
+    "placement_axes": [
+      31.25,
+      31.5,
+      32.0,
+      32.0,
+      31.75,
+      31.5
+    ],
+    "unique_frame_hashes": 6,
+    "visible_palette_colors": 32,
+    "partially_transparent_pixels": 0,
+    "temporal": {
+      "min_silhouette_change": 0.06832298136645963,
+      "max_silhouette_change": 0.18940248027057496,
+      "closure_silhouette_change": 0.13356562137049943,
+      "max_head_anchor_dx": 0.0,
+      "max_torso_anchor_dx": 0.4453625087849282,
+      "max_identity_anchor_dx": 0.4453625087849282,
+      "max_foot_axis_dx": 4.5,
+      "max_visible_height_delta": 2,
+      "max_palette_total_variation": 0.1047141151114944,
+      "min_motion_silhouette_change": 0.06832298136645963,
+      "max_motion_silhouette_change": 0.18940248027057496
+    },
+    "refined_grids": [
+      [
+        63,
+        63
+      ],
+      [
+        62,
+        63
+      ],
+      [
+        66,
+        66
+      ],
+      [
+        63,
+        63
+      ],
+      [
+        62,
+        63
+      ],
+      [
+        66,
+        66
+      ]
+    ],
+    "shared_refined_grid": false,
+    "recovery_grid_policy": {
+      "mode": "recorded-per-frame",
+      "shared": false,
+      "valid": true,
+      "satisfied": true
+    },
+    "identity_lock": {
+      "enabled": false,
+      "max_mismatched_pixels": 0
+    },
+    "phase_pairs": {
+      "pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "height_deltas": [
+        1,
+        1,
+        0
+      ],
+      "max_height_delta": 1
+    },
+    "paired_transitions": {
+      "pairs": [
+        {
+          "transition_indices": [
+            0,
+            3
+          ],
+          "from_to": [
+            [
+              "left-contact",
+              "left-recoil"
+            ],
+            [
+              "right-contact",
+              "right-recoil"
+            ]
+          ],
+          "motion_silhouette_change": [
+            0.10024154589371981,
+            0.06832298136645963
+          ],
+          "ratio": 1.4671717171717171
+        },
+        {
+          "transition_indices": [
+            1,
+            4
+          ],
+          "from_to": [
+            [
+              "left-recoil",
+              "passing-right"
+            ],
+            [
+              "right-recoil",
+              "passing-left"
+            ]
+          ],
+          "motion_silhouette_change": [
+            0.14385150812064965,
+            0.09735576923076923
+          ],
+          "ratio": 1.4775858611898827
+        },
+        {
+          "transition_indices": [
+            2,
+            5
+          ],
+          "from_to": [
+            [
+              "passing-right",
+              "right-contact"
+            ],
+            [
+              "passing-left",
+              "left-contact"
+            ]
+          ],
+          "motion_silhouette_change": [
+            0.18940248027057496,
+            0.13356562137049943
+          ],
+          "ratio": 1.418048134895348
+        }
+      ],
+      "max_ratio": 1.4775858611898827
+    },
+    "thresholds": {
+      "axis_tolerance": 0.5,
+      "min_adjacent_silhouette_change": 0.02,
+      "max_adjacent_silhouette_change": 0.5,
+      "max_adjacent_head_shift": 2.0,
+      "max_adjacent_torso_shift": 2.0,
+      "max_adjacent_palette_tv": 0.4,
+      "max_paired_transition_ratio": 1.15,
+      "require_paired_transition_cadence": false,
+      "max_paired_height_delta": 1
+    }
+  }
+}

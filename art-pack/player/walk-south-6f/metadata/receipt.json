@@ -1,0 +1,158 @@
+{
+  "schema_version": 2,
+  "job_id": "player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3",
+  "status": "approved-temporal-gold",
+  "created_at": "2026-08-29",
+  "pipeline": {
+    "skill": "create-fixed-direction-action-sprites 3.4.0",
+    "processing_tool": "create-fixed-direction-action-sprites.build 3.4.0",
+    "pixel_workbench": "pixel-region-workbench 1.1.0",
+    "referenced_skill": "create-topdown-8dir-sprites",
+    "perfect_pixel": "perfect-pixel==0.1.4",
+    "disabled_skill": "create-2d-game-art"
+  },
+  "observed_diagnostic": {
+    "prior_problem": "Separately generated frames preserved anatomy but drifted in face, hair silhouette, emblem, anchors, and temporal phase spacing.",
+    "actual_visible_heights_px": [
+      52,
+      51,
+      53,
+      51,
+      52,
+      53
+    ],
+    "intended_visible_heights_px": [
+      52,
+      51,
+      53,
+      52,
+      51,
+      53
+    ],
+    "paired_transition_ratios": [
+      1.4671717171717171,
+      1.4775858611898827,
+      1.418048134895348
+    ],
+    "classification": "visual-diagnostic",
+    "user_decision": "accepted-as-perfect"
+  },
+  "procedure_fix_proven": {
+    "feature_classes": {
+      "stable_identity": [
+        "complete same-view head and face",
+        "cross emblem"
+      ],
+      "phase_specific": [
+        "skirt",
+        "cuffs",
+        "hands",
+        "legs",
+        "boots"
+      ]
+    },
+    "logical_space": "64x64x4 RGBA",
+    "head_rect": [
+      19,
+      8,
+      44,
+      29
+    ],
+    "cross_rect": [
+      28,
+      28,
+      35,
+      38
+    ],
+    "integer_bob_offsets_y": [
+      0,
+      1,
+      -1,
+      1,
+      0,
+      -1
+    ],
+    "transparent_cells_in_head_patch": 165,
+    "unchanged_outside_approved_writes": true,
+    "post_recovery_resampling": false,
+    "max_head_anchor_dx_after": 0.0,
+    "exact_identity_mismatch_pixels": 0,
+    "context_review": "ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/evidence/local-identity-review"
+  },
+  "boundary_decision": {
+    "safe_postprocess": "Canonical exact patches for rigid same-view identity features, including their transparent erase footprints and a reviewed context ring.",
+    "unsafe_postprocess": "Any patch that attempts to repair coordinated hip, knee, ankle, skirt, and whole-body bob semantics across articulated boundaries.",
+    "metric_boundary": "Paired silhouette-change ratios are diagnostics unless the asset contract explicitly promotes them to a hard gate."
+  },
+  "recovery": {
+    "policy": "recorded-per-frame",
+    "refined_grids": [
+      [
+        63,
+        63
+      ],
+      [
+        62,
+        63
+      ],
+      [
+        66,
+        66
+      ],
+      [
+        63,
+        63
+      ],
+      [
+        62,
+        63
+      ],
+      [
+        66,
+        66
+      ]
+    ],
+    "shared_refined_grid": false,
+    "continuous_scaling_to_force_shared_grid": false
+  },
+  "automated_checks": {
+    "technical_verdict": "pass",
+    "diagnostic_verdict": "warn-accepted",
+    "visual_verdict": "pass",
+    "failed_hard_checks": [],
+    "diagnostic_warnings": [
+      "paired_transition_cadence"
+    ],
+    "max_paired_transition_ratio": 1.4775858611898827,
+    "max_paired_transition_ratio_threshold": 1.15,
+    "audit": "ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/generated/player-black-haired-girl-walk-south-6f-64-v3-audit.json"
+  },
+  "outputs": {
+    "sheet": {
+      "path": "ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/generated/player-black-haired-girl-walk-south-6f-64-v3.png",
+      "sha256": "d0fd26fdc30fd86470ee67a1ed6e67de50bc04b3b064adfb045d98d10572981e"
+    },
+    "manifest": {
+      "path": "ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/generated/player-black-haired-girl-walk-south-6f-64-v3.json",
+      "sha256": "ab8249f101de59865dbf008096e98ac13b1b9dffac267b2ba65e48fe21fd1b57"
+    },
+    "audit": {
+      "path": "ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/generated/player-black-haired-girl-walk-south-6f-64-v3-audit.json",
+      "sha256": "3ad02ed8b02f85336336ce1e6fe80c8002d2ba5e78ff584071ef8fa271343f08"
+    },
+    "gif": {
+      "path": "ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/evidence/player-black-haired-girl-walk-south-6f-64-v3.gif",
+      "sha256": "9f5131071e9dfc9efddfac2ca7eac912e04bd9ef549b259612f87e6914ed2fbe"
+    },
+    "slow_gif": {
+      "path": "ArtSource/2D/Player/player-black-haired-girl-walk-south-6f-independent-local-repair-64-v3/evidence/player-black-haired-girl-walk-south-6f-64-v3-slow.gif",
+      "sha256": "272f86cf51475b475821cf2002568e3b9263caa37fd70a502c4c8f1d99160664"
+    }
+  },
+  "user_approval": {
+    "decision": "perfect",
+    "date": "2026-08-29",
+    "evidence": "Current task plus normal and slow loop previews"
+  },
+  "approval_boundary": "Approved south temporal gold. Its six phases may be propagated through create-topdown-8dir-sprites; do not import into Assets/Art/2D until separately authorized."
+}
