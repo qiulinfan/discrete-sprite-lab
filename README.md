@@ -6,7 +6,7 @@
 
 Discrete Sprite Lab is a public research-and-art repository about producing readable, temporally coherent pixel characters with generative image models. It contains an art pack, reproducible Codex Skills, production methodology, development history, and failures that changed the pipeline.
 
-> This repository is publicly visible, but no reuse license has been granted yet. See [RIGHTS.md](RIGHTS.md) before copying art, code, or documentation.
+This project is intentionally permissive: art and documentation are released under **CC0 1.0**, while code and Agent Skills use the **MIT License**. Commercial use, modification, redistribution, and derivative works are welcome. See [LICENSE](LICENSE).
 
 ## Current art pack
 
@@ -65,11 +65,18 @@ uv run skills/create-fixed-direction-action-sprites/tests/test_v3_visual_review.
 uv run skills/create-fixed-direction-action-sprites/tests/test_pixel_region_workbench.py
 ```
 
-The verifier checks frame counts, `64×64` dimensions, binary Alpha, sheet dimensions, GIF phase counts, JSON parsing, publication-path hygiene, file size limits, local links, and symlink safety. `MANIFEST.sha256` records every published file.
+The verifier checks frame counts, `64×64` dimensions, binary Alpha, sheet dimensions, GIF phase counts, JSON parsing, publication-path hygiene, file size limits, local links, and symlink safety.
 
 ## Third-party boundary
 
 Perfect Pixel is an external MIT-licensed dependency and is not vendored here. Image generation was performed with OpenAI ImageGen. See [THIRD_PARTY.md](THIRD_PARTY.md) and [Reproducibility](docs/reproducibility.md).
+
+## License
+
+- Art, examples, failure evidence, and documentation: [CC0 1.0 Universal](LICENSES/CC0-1.0.txt)
+- Software and Agent Skills: [MIT](LICENSES/MIT.txt)
+
+Attribution is appreciated but not required for CC0 material.
 
 ## Status
 

@@ -1,0 +1,37 @@
+Discrete Sprite Lab uses a permissive dual-license model.
+
+CC0 1.0 Universal
+-----------------
+
+The following material is dedicated to the public domain under CC0 1.0
+Universal, to the extent legally possible:
+
+- art-pack/**
+- case-studies/**
+- docs/**
+- README.md
+- README.zh-CN.md
+- ARTIFACTS.md
+- CHANGELOG.md
+
+You may copy, modify, distribute, perform, and use this material for any
+purpose, including commercial purposes, without asking permission or giving
+attribution. The complete legal text is in LICENSES/CC0-1.0.txt.
+
+MIT License
+-----------
+
+Software and Agent Skills under the following paths are licensed under MIT:
+
+- skills/**
+- scripts/**
+
+You may use, copy, modify, merge, publish, distribute, sublicense, and sell
+copies subject to the notice requirements in the MIT License. The complete
+text is in LICENSES/MIT.txt.
+
+Third-party material
+--------------------
+
+Third-party projects and services retain their own terms. See THIRD_PARTY.md.
+No third-party source art is included in this repository.

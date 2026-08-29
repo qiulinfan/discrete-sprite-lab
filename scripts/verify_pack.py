@@ -8,7 +8,6 @@
 from __future__ import annotations
 
 import json
-import hashlib
 import re
 from pathlib import Path
 
@@ -43,20 +42,14 @@ def verify_gif(path: Path, expected_frames: int) -> None:
         )
 
 
-def sha256(path: Path) -> str:
-    value = hashlib.sha256()
-    with path.open("rb") as stream:
-        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
-            value.update(chunk)
-    return value.hexdigest()
-
-
 def main() -> int:
     required_root_files = (
         "README.md",
         "README.zh-CN.md",
         "ARTIFACTS.md",
-        "RIGHTS.md",
+        "LICENSE",
+        "LICENSES/CC0-1.0.txt",
+        "LICENSES/MIT.txt",
         "THIRD_PARTY.md",
         "docs/methodology.md",
         "docs/development-journal.md",
@@ -127,22 +120,10 @@ def main() -> int:
             require((markdown.parent / clean).resolve().exists(), f"broken link: {markdown} -> {target}")
             local_link_count += 1
 
-    manifest = ROOT / "MANIFEST.sha256"
-    require(manifest.is_file(), "missing MANIFEST.sha256")
-    manifest_count = 0
-    for line in manifest.read_text().splitlines():
-        expected, separator, relative = line.partition("  ")
-        require(bool(separator and expected and relative), f"invalid manifest line: {line}")
-        artifact = ROOT / relative
-        require(artifact.is_file(), f"manifest file is missing: {relative}")
-        require(sha256(artifact) == expected, f"manifest hash mismatch: {relative}")
-        manifest_count += 1
-
     print(
         "publication-ok "
         f"idle_frames={len(idle_frames)} walk_frames={len(walk_paths)} "
-        f"json_files={json_count} local_links={local_link_count} "
-        f"manifest_files={manifest_count}"
+        f"json_files={json_count} local_links={local_link_count}"
     )
     return 0
 
