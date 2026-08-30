@@ -65,6 +65,7 @@ uv run scripts/build_topdown_8dir.py \
   --target-visible-height 52 \
   --height-tolerance 1 \
   --target-bottom 61 \
+  --placement-axis foot \
   --colors 32 \
   --palette-reference south \
   --rotation-ms 120 \
@@ -73,6 +74,8 @@ uv run scripts/build_topdown_8dir.py \
 ```
 
 The automatic calibration begins with `--grid 64`, measures each recovered visible height, and makes an integer grid correction with refinement fixed at zero. To reproduce an approved calibration exactly, pass overrides:
+
+`--placement-axis foot` is the static/idle default and aligns the grounded support axis. When `create-fixed-direction-action-sprites` hands off one approved temporal phase, use `--placement-axis body` so the head/torso axis stays on the gameplay root while that phase's feet move around it. Do not select `body` to conceal a malformed static turnaround or inconsistent internal proportions.
 
 `--normalize-source-visible-height 0` preserves source occupancy. Set it to a measured high-resolution alpha-bbox height only when the pseudo-pixel generator reintroduced uniform scale drift. The processor writes normalized copies under `working/source-normalized/`; originals remain untouched. This step uses nearest-neighbor sampling before majority recovery and is distinct from forbidden post-recovery resampling.
 
@@ -105,7 +108,7 @@ The final placement aligns the extent midpoint of the bottommost 4% grounded sup
 
 ## Acceptance
 
-Automated acceptance requires eight nonempty frames of the requested size, canonical direction order, binary alpha, palette within the requested limit, common bottom contact, foot axes within tolerance, every visible height within tolerance, bounded head-to-foot offset spread, bounded adjacent head and torso shifts, bounded adjacent palette-distribution distance, zero post-recovery resampling, bounded recovery grids, and deterministic hashes on repetition.
+Automated acceptance requires eight nonempty frames of the requested size, canonical direction order, binary alpha, palette within the requested limit, common bottom contact, the selected foot or body placement axes within tolerance, every visible height within tolerance, bounded adjacent head and torso shifts, bounded adjacent palette-distribution distance, zero post-recovery resampling, bounded recovery grids, and deterministic hashes on repetition. Static `foot` placement additionally gates head-to-foot offset spread; action-phase `body` placement records foot offsets as motion evidence instead of treating them as the root.
 
 Human acceptance checks identity, angle readability, face integrity, costume continuity, silhouette mass, painted-light continuity, native-size readability, and motion continuity in both rotation speeds. Review the circular `NW → N` transition explicitly. Record source-level limitations separately from processing defects.
 

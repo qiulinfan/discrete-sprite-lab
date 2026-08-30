@@ -18,7 +18,7 @@ Produce an auditable eight-view character set ordered `N, NE, E, SE, S, SW, W, N
 - Let Perfect Pixel recovery define the final logical pixels. Use `majority` sampling, disable automatic refinement, and calibrate an integer grid per direction when necessary.
 - After recovery, forbid all non-integer resampling. Only crop transparent bounds, center, integer-translate, and pad with transparency.
 - Select one approved palette authority, normally `S`, and map every direction to that canonical palette. Do not build the style authority by allowing all eight generated views to vote equally.
-- Align the final foot rotation axis from the bottommost grounded support region, excluding suspended bows, blades, scabbards, capes, and effects. Audit the head-to-foot axis offset across the full circle; repair excessive spread before pseudo-pixel recovery, not by deforming recovered pixels.
+- For static and idle turnarounds, align the final foot rotation axis from the bottommost grounded support region, excluding suspended bows, blades, scabbards, capes, and effects. For one already-approved animation phase propagated across directions, use the stable head/torso body axis instead because the feet move around the gameplay root. Audit the applicable root across the full circle; repair excessive drift before pseudo-pixel recovery, not by deforming recovered pixels.
 - Preserve raw generated sources. A checkerboard-looking or black background is not evidence of real transparency; inspect image mode and alpha values, then remove only corner-connected light or dark matte regions.
 
 ## Workflow
@@ -27,7 +27,7 @@ Produce an auditable eight-view character set ordered `N, NE, E, SE, S, SW, W, N
 2. Approve the `S` master, then create `N/E/W`, then the diagonals using both neighboring cardinals. Reject a source that violates internal landmarks. Uniform scale and integer or high-resolution translation are allowed only before pseudo-pixel conversion; do not piecewise-warp anatomy.
 3. Convert each approved direction separately to a high-resolution pseudo-pixel image using the master view or palette card as the color reference. Require a coherent repeated lattice. Recheck source occupancy because generation can reintroduce scale drift; when needed, use the processor's pre-recovery source normalization rather than post-recovery resizing.
 4. Name the sources exactly `north.png`, `northeast.png`, `east.png`, `southeast.png`, `south.png`, `southwest.png`, `west.png`, `northwest.png`.
-5. Run `scripts/build_topdown_8dir.py`. Automatic integer-grid calibration, optional high-resolution source-occupancy normalization, `S` palette authority, foot-axis alignment, fast circular preview, and continuity gates are defaults.
+5. Run `scripts/build_topdown_8dir.py`. Automatic integer-grid calibration, optional high-resolution source-occupancy normalization, `S` palette authority, fast circular preview, and continuity gates are defaults. Keep the default `--placement-axis foot` for static poses; pass `--placement-axis body` only when processing one approved action phase from `create-fixed-direction-action-sprites`.
 6. Inspect the recovered 1:1 frames, continuity guide, `120ms` rotation GIF, slow GIF, transition metrics, and audit. If the foot axis aligns but head-to-foot offset still varies excessively, return to the high-detail sources.
 7. Regenerate only a direction whose source pose, landmarks, lighting, or identity are wrong. Never repair source errors by stretching or shrinking recovered pixels.
 
@@ -38,7 +38,7 @@ Produce an auditable eight-view character set ordered `N, NE, E, SE, S, SW, W, N
 - `SE/S/SW` must retain the intended eyes and face landmarks; never delete eyes merely to signal direction.
 - Opposite views should agree on height, body mass, hair volume, costume landmarks, and handed asymmetries.
 - Adjacent views must transition smoothly around the complete loop, including `NW → N`; do not review only the 4x2 sheet.
-- The foot axis is the hard gameplay pivot. Head and torso anchors are continuity gates, not independent post-processing translation targets.
+- The selected placement axis is the hard gameplay pivot: `foot` for static turnarounds and `body` for one propagated action phase. Head and torso anchors remain continuity gates, not independent post-processing translation targets.
 - Palette membership alone is insufficient. Review adjacent palette-distribution distance and painted highlight or shadow placement.
 - A one-pixel visible-height spread is a useful default for a static pose. Change the tolerance only when perspective or animation genuinely requires it.
 - Judge the sprites at native size and nearest-neighbor magnification. Smooth display scaling is not valid pixel-art evidence.

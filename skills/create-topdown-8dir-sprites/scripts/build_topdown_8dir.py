@@ -33,7 +33,7 @@ DIRECTIONS = (
 )
 LABELS = ("N", "NE", "E", "SE", "S", "SW", "W", "NW")
 TOOL = "create-topdown-8dir-sprites.build"
-VERSION = "2.1.0"
+VERSION = "2.2.0"
 
 
 def file_sha256(path: Path) -> str:
@@ -303,30 +303,44 @@ def landmark_metrics(image: Image.Image) -> dict:
             "visible_pixels": int(len(region_x)),
         }
 
+    head_metrics = region(head)
+    torso_metrics = region(torso)
+    feet_metrics = region(feet)
     return {
         "alpha_bbox": [x0, y0, x1, y1],
         "visible_width": x1 - x0,
         "visible_height": y1 - y0,
         "alpha_centroid_x": float(xs.mean()),
-        "head": region(head),
-        "torso": region(torso),
-        "feet": region(feet),
+        "head": head_metrics,
+        "torso": torso_metrics,
+        "feet": feet_metrics,
+        "body_axis_x": float((head_metrics["centroid_x"] + torso_metrics["centroid_x"]) / 2),
     }
 
 
-def place_one_to_one(image: Image.Image, frame_size: int, target_bottom: int) -> tuple[Image.Image, dict]:
+def place_one_to_one(
+    image: Image.Image,
+    frame_size: int,
+    target_bottom: int,
+    placement_axis: str = "foot",
+) -> tuple[Image.Image, dict]:
     bbox = alpha_bbox(image)
     crop = image.crop(bbox).convert("RGBA")
     if crop.width > frame_size or crop.height > frame_size:
         raise ValueError(f"Recovered sprite {crop.size} does not fit {frame_size}x{frame_size} without scaling")
     crop_landmarks = landmark_metrics(crop)
     target_axis_x = (frame_size - 1) / 2
-    foot_axis_x = crop_landmarks["feet"]["extent_mid_x"]
-    x = round(target_axis_x - foot_axis_x)
+    if placement_axis == "foot":
+        source_axis_x = crop_landmarks["feet"]["extent_mid_x"]
+    elif placement_axis == "body":
+        source_axis_x = crop_landmarks["body_axis_x"]
+    else:
+        raise ValueError(f"Unsupported placement axis: {placement_axis}")
+    x = round(target_axis_x - source_axis_x)
     y = target_bottom - crop.height
     if x < 0 or x + crop.width > frame_size:
         raise ValueError(
-            f"Recovered sprite {crop.size} cannot align its foot axis to {target_axis_x} "
+            f"Recovered sprite {crop.size} cannot align its {placement_axis} axis to {target_axis_x} "
             f"on {frame_size}x{frame_size} without scaling or clipping"
         )
     if y < 0 or target_bottom > frame_size:
@@ -343,10 +357,11 @@ def place_one_to_one(image: Image.Image, frame_size: int, target_bottom: int) ->
     final_landmarks = landmark_metrics(canvas)
     return canvas, {
         "placement_mode": "one-to-one",
+        "placement_axis": placement_axis,
         "recovered_crop_size": [crop.width, crop.height],
         "position": [x, y],
         "final_alpha_bbox": list(alpha_bbox(canvas)),
-        "target_foot_axis_x": target_axis_x,
+        "target_placement_axis_x": target_axis_x,
         "source_landmarks": crop_landmarks,
         "final_landmarks": final_landmarks,
         "resampled_after_recovery": False,
@@ -618,6 +633,15 @@ def main() -> int:
     parser.add_argument("--target-visible-height", type=int, default=52)
     parser.add_argument("--height-tolerance", type=int, default=1)
     parser.add_argument("--target-bottom", type=int, default=61)
+    parser.add_argument(
+        "--placement-axis",
+        choices=("foot", "body"),
+        default="foot",
+        help=(
+            "Horizontal root used for 1:1 placement after recovery: foot for static turnarounds, "
+            "body for one propagated animation phase whose feet move around a stable gameplay root"
+        ),
+    )
     parser.add_argument("--colors", type=int, default=32)
     parser.add_argument("--palette-reference", choices=(*DIRECTIONS, "shared"), default="south")
     parser.add_argument("--rotation-ms", type=int, default=120)
@@ -701,7 +725,12 @@ def main() -> int:
         )
         recovered_path = root / f"working/perfect-pixel/{direction}.png"
         recovered.save(recovered_path)
-        placed, placement = place_one_to_one(recovered, args.frame_size, args.target_bottom)
+        placed, placement = place_one_to_one(
+            recovered,
+            args.frame_size,
+            args.target_bottom,
+            args.placement_axis,
+        )
         placed_path = root / f"working/placed-1to1/{direction}.png"
         placed.save(placed_path)
         placed_frames.append(placed)
@@ -798,6 +827,7 @@ def main() -> int:
             "target_bottom": args.target_bottom,
             "post_recovery_resampling": False,
             "placement": "one-to-one",
+            "placement_axis": args.placement_axis,
             "palette_mode": "canonical-reference-oklab-medoid",
             "palette_reference": args.palette_reference,
             "colors": args.colors,
@@ -844,10 +874,6 @@ def main() -> int:
         "no_post_recovery_resampling": all(
             record["placement"]["resampled_after_recovery"] is False for record in grid_records
         ),
-        "foot_axes_aligned": all(
-            abs(metrics["feet"]["extent_mid_x"] - target_axis_x) <= args.axis_tolerance
-            for metrics in continuity["frame_metrics"]
-        ),
         "adjacent_head_anchor_shift_bounded": (
             continuity_summary["max_head_anchor_dx"] <= args.max_adjacent_head_shift
         ),
@@ -857,15 +883,25 @@ def main() -> int:
         "adjacent_palette_transition_bounded": (
             continuity_summary["max_palette_total_variation"] <= args.max_adjacent_palette_tv
         ),
-        "head_foot_axis_offset_spread_bounded": (
-            continuity_summary["head_foot_axis_offset_spread"] <= args.max_head_foot_offset_spread
-        ),
         "recovery_grids_bounded": all(
             args.frame_size // 2 <= dimension <= args.frame_size * 2
             for grid in selected_refined_grids
             for dimension in grid
         ),
     }
+    if args.placement_axis == "foot":
+        checks["foot_axes_aligned"] = all(
+            abs(metrics["feet"]["extent_mid_x"] - target_axis_x) <= args.axis_tolerance
+            for metrics in continuity["frame_metrics"]
+        )
+        checks["head_foot_axis_offset_spread_bounded"] = (
+            continuity_summary["head_foot_axis_offset_spread"] <= args.max_head_foot_offset_spread
+        )
+    else:
+        checks["body_axes_aligned"] = all(
+            abs(metrics["body_axis_x"] - target_axis_x) <= args.axis_tolerance
+            for metrics in continuity["frame_metrics"]
+        )
     audit = {
         "schema_version": 1,
         "tool": TOOL,
@@ -886,6 +922,7 @@ def main() -> int:
             "selected_refined_grids": selected_refined_grids,
             "palette_reference": args.palette_reference,
             "target_axis_x": target_axis_x,
+            "placement_axis": args.placement_axis,
             "continuity": continuity_summary,
             "continuity_thresholds": {
                 "axis_tolerance": args.axis_tolerance,
