@@ -1,4 +1,4 @@
 interface:
   display_name: "Create Fixed-Direction Action Sprites"
-  short_description: "Build visually approved fixed-direction pixel actions"
-  default_prompt: "Use $create-fixed-direction-action-sprites to create and audit one fixed-direction pixel animation cycle with magnified local semantic review, exact pixel patches, hard integrity checks, and explicit visual diagnostics."
+  short_description: "Create native or generated fixed-view pixel actions"
+  default_prompt: "Use $create-fixed-direction-action-sprites to choose native-master or generated-frame authoring for one fixed-view pixel action, declare anatomical anchors and semantic phases, preserve exact RGBA, and review every magnified frame plus normal and slow playback."

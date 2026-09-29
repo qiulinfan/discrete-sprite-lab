@@ -1,40 +1,45 @@
 # Fixed-Direction Action Contract
 
-Read this reference when defining phases, generating frames, running the processor, reviewing a temporal loop, or handing approved phases to the turnaround Skill.
+Read this reference when defining an action contract or using the generated-frame route. For direct native authoring and packaging, also read [native-master.md](native-master.md).
 
 ## Required Contract
 
 - character and approved identity/palette gold;
-- high-detail, pseudo-pixel, and logical-frame magnified review roots;
+- authoring mode (`native` or `generated`) and why the available source supports it;
+- review roots for actual stages: native master and logical frames, or high-detail, pseudo-pixel, and logical frames; both routes include normal/slow playback;
 - local semantic feature records with agent-approved rectangles or masks, anchors, phase families, context rings, and allowed integer transforms;
 - one fixed facing direction;
 - action name and gameplay meaning;
 - frame count, ordered phase IDs, duration per frame, loop or one-shot behavior;
 - planted limb, swing limb, contact events, hit or tool event frames when applicable;
-- per-frame body-height profile, rotation or body-axis expectation, and foot baseline;
-- recovery-grid policy: either one shared refined-grid shape or an evidence-backed integer grid record per frame, with no post-recovery resampling;
+- per-frame body-height profile, agent-declared anatomical body/joint anchors, offsets, rotation/body-axis expectation, and foot baseline;
+- generated recovery-grid policy: either one shared refined-grid shape or an evidence-backed integer grid record per frame, with no post-recovery resampling; `not-applicable` for native inputs;
 - phase pairs and paired transition indices for physically symmetric cycles;
 - which metrics are diagnostics and whether any diagnostic is explicitly promoted to a hard contract gate;
 - camera, lighting, canvas size, final frame size, pivot, and PPU assumption;
-- high-detail, pseudo-pixel, final, preview, manifest, audit, and engine destination paths;
+- applicable source/cel, final, preview, manifest, audit, and engine destination paths;
 - authorization boundary for turnaround propagation and engine import.
 
 ## Six-Frame Walk Example
 
-Generate the key poses in constraint order rather than chronological order:
+Author the key poses in constraint order rather than chronological order: opposite contacts first, opposite passing poses next, then recoil constrained by neighboring keys. The playback order is:
 
 1. `frame-00-left-contact`: left foot plants forward; right foot trails; opposite arm counter-swing.
 2. `frame-01-left-recoil`: left foot bears weight while right foot lifts.
 3. `frame-02-passing-right`: right leg passes forward close beneath the body; body reaches its high point.
-4. Independently generate `frame-03-right-contact` as the paired opposite of frame 0.
-5. Independently generate `frame-04-right-recoil` as the paired opposite of frame 1.
-6. Independently generate `frame-05-passing-left` as the paired opposite of frame 2 and verify closure into frame 0.
+4. `frame-03-right-contact`: the paired opposite of frame 0.
+5. `frame-04-right-recoil`: the paired opposite of frame 1.
+6. `frame-05-passing-left`: the paired opposite of frame 2; verify closure into frame 0.
+
+Native work shares suitable identity cels but authors both articulated sides. Generated work creates both sides as complete independent frames. Neither uses a global raster mirror as the opposite pose.
 
 Example height profile for a 52-pixel visible character: `52,51,53,52,51,53`. Treat it as a configurable starting point, not a universal walk law.
 
 Each phase card should show the body axis, head top, belt or torso landmark, contact line, planted foot, swing foot, limb direction, and body-height target. Do not rely on prose alone for limb-specific action.
 
-## Source Generation Rules
+## Generated Source Rules
+
+These rules apply only to generated phases. Native masters go directly through authored logical geometry and native review, without invented generation or recovery stages.
 
 - One ImageGen call per phase or one edit that changes only the intended phase.
 - Generate a complete coherent body for every phase. Identity references constrain generation but do not authorize late broad-mask compositing across anatomy.
@@ -45,7 +50,7 @@ Each phase card should show the body axis, head top, belt or torso landmark, con
 - Prefer a shared recovery lattice, but do not continuously scale or warp a valid source merely to force one. Reject a pseudo source when it cannot recover through a documented integer grid without semantic loss. Palette agreement and matching outer bounds do not prove a clean recovery.
 - Inspect every generated stage at a size where local semantic topology is readable. A compact contact sheet is navigation evidence, not visual approval.
 
-## Processor
+## Generated Processor
 
 Inputs are `frame-00.png`, `frame-01.png`, and so on under one pseudo-pixel source directory. The gold frame is an approved final logical-pixel PNG for the same direction and supplies the canonical palette.
 
@@ -97,27 +102,28 @@ For local logical-pixel reasoning and repair, read [pixel-reasoning-boundary.md]
 
 - correct frame count, order, size, palette, binary Alpha, pivot, and duration;
 - zero post-recovery resampling;
-- all requested height-profile values within tolerance;
-- the declared recovery-grid policy passes: either one identical refined-grid shape or complete per-frame integer-grid evidence;
+- all contracted anchor/contact and height-profile values within tolerance;
+- for generated sources the declared recovery-grid policy passes: either one identical refined-grid shape or complete per-frame integer-grid evidence;
 - paired phase heights within the declared tolerance;
 - foot axes and bottom contacts remain within tolerance;
-- the declared head/torso body placement axis remains fixed while feet are allowed to move around the pivot;
-- no exact duplicate frames;
-- each adjacent silhouette change is large enough to be a distinct phase but bounded against identity drift;
-- head and torso lateral shifts remain bounded;
-- palette-distribution changes remain bounded;
+- the declared body axis and offsets are respected while feet move around the gameplay pivot; stable shape follows its parent/body motion;
+- no visibly duplicate phases; intentional holds use duration;
+- the generated builder's configured silhouette-change, head/torso-shift, and palette-distance bounds pass as its technical gates; those measurements do not establish motion quality;
 - last-to-first closure is explicitly included;
-- each complete high-detail frame passes native-resolution anatomy review;
-- each pseudo-pixel source passes native-resolution feature and lattice review;
+- each applicable complete high-detail frame passes native-resolution anatomy review;
+- each applicable pseudo-pixel source passes native-resolution feature and lattice review; native work reviews the prepared master instead;
 - every logical frame passes an individual nearest-neighbor magnified review of at least 1024 pixels on the long edge;
 - agent-reviewed stable-identity patches include transparent erase footprints, preserve their context rings, and do not cross articulating boundaries;
 - articulated details use phase-specific feature families rather than a universal identity patch;
 - human or agent visual review confirms phase semantics, planted-foot stability, swing trajectory, body bob, camera-relative lighting, anatomy, and action readability;
 - technical evidence alone yields `awaiting-visual-review`, not `pass`.
 
+Automated placement from an outer silhouette is provisional. Confirm the actual neck/shoulder/hip landmarks; an identical centroid does not prove the body is connected. Shared native torso/head cels are construction elements, while generated repairs stay bounded away from articulating joints.
+
 ## Visual Diagnostics
 
 - corresponding left/right transition motion ratios and silhouette-change distances are reported with their reference limits;
+- silhouette-change size, lateral-shift estimates, and palette distributions do not prove anatomy or motion quality. The existing generated processor enforces its configured bounds as technical gates; record that behavior in the contract rather than treating a failed gate as an automatically overridable visual warning;
 - a passing in-range diagnostic needs no override;
 - an out-of-range diagnostic cannot decide the result alone and requires explicit normal-speed and slow-loop review;
 - the review records the accepting authority and reason; direct user approval outranks an agent's subjective rejection;
@@ -125,12 +131,15 @@ For local logical-pixel reasoning and repair, read [pixel-reasoning-boundary.md]
 
 ## Handoff to `create-topdown-8dir-sprites`
 
-Handoff occurs only after temporal approval. For every approved phase:
+Keep the spatial Skill unchanged. With approved native directional masters, complete this Skill separately for each direction, review each full row, then assemble and review spatial continuity at corresponding phases. Establish missing view masters through the spatial Skill when needed.
+
+For generated phase propagation, handoff occurs after temporal approval. For every approved phase:
 
 1. provide its high-detail and pseudo-pixel temporal-master source, phase card, palette authority, anchor facts, and hash;
 2. invoke `create-topdown-8dir-sprites` for that single phase;
 3. keep direction order and per-phase pivot fixed;
 4. reject a directional set before assembling the action if that phase fails turnaround continuity;
-5. assemble `directions × phases` only after every phase passes both Skill contracts.
+5. audit each assembled direction as a complete temporal action, including individual frames and normal/slow last-to-first playback;
+6. assemble `directions × phases` only after every phase passes spatial checks and every direction passes temporal checks.
 
-The action Skill remains authoritative for phase meaning and cyclic timing. The turnaround Skill remains authoritative for identity and spatial direction continuity. Neither Skill silently takes over the other's axis.
+The action Skill remains authoritative for phase meaning and cyclic timing. The turnaround Skill remains authoritative for identity and spatial direction continuity. Independently approved turnarounds cannot establish temporal consistency; neither Skill silently takes over the other's axis.

@@ -10,7 +10,7 @@ Read this reference when reviewing, comparing, or repairing logical pixel frames
 - classify it as `stable_identity` or `phase_specific` before extraction;
 - choose the approved reference and phase-specific variant;
 - assign integer anchors, occlusion order, and allowed transforms;
-- inspect the high-detail source at native resolution, the pseudo-pixel source at native resolution, and every recovered logical frame at a nearest-neighbor display size of at least 1024 pixels on the long edge;
+- inspect each applicable source stage (native master, or high-detail and pseudo-pixel sources) at native resolution and every final logical frame at a nearest-neighbor display size of at least 1024 pixels on the long edge;
 - reason about local topology: silhouette, connected anatomy, negative space, occlusion, part count, and whether a patch boundary remains coherent;
 - author or approve the exact pixel patch and reject it when the local match or surrounding context is ambiguous.
 
@@ -35,7 +35,7 @@ Each level must pass before the next. Local windows should normally contain 8-24
 
 These operations must not infer semantics. A script may enumerate connected components, exact contours, integer-offset overlap scores, or IoU candidates, but the agent selects and approves the correspondence.
 
-For temporal character placement, the agent declares the stable body axis. The script may integer-translate the recovered frame to that axis. It must not infer the pivot from whichever foot happens to be planted in the current phase.
+For temporal character placement, the agent declares the body origin, neck/shoulder/hip landmarks, and phase offsets. The script may execute those integer transforms; outline/Alpha-centroid registration is only a provisional estimate. It must not infer the pivot from whichever foot happens to be planted in the current phase. A shared head follows its neck/body offset; fixed canvas coordinates are not stable anatomy when the torso bobs.
 
 ## Forbidden Repair Operations
 
@@ -52,10 +52,12 @@ The logical canvas is exact `width × height × 4` RGBA, not RGB alone: transpar
 
 ## Feature Classes
 
-- `stable_identity`: fixed within one view and action family except for declared integer bob or translation. Typical examples are the complete head silhouette with face, a chest emblem, or a rigid hair ornament. One canonical exact cell set may be reused after whole-frame generation.
+- `stable_identity`: fixed within one view and action family except for declared integer bob or translation. Typical examples are an invariant head silhouette with face, a chest emblem, or a rigid hair ornament. One canonical exact cell set may be reused in native construction or as a bounded generated-frame patch. Expressive or rotating heads need phase variants instead.
 - `phase_specific`: changes topology, bend, overlap, or lighting with the action. Skirt hems, sleeves, cuffs, hands, legs, and boots use separate contact, recoil, passing, or other phase-family variants. Mirroring one local variant is allowed only when its record explicitly permits `mirror_x` and the agent approves the surrounding anatomy afterward.
 
 Do not promote a feature to `stable_identity` merely because copying it improves a metric. If its patch would cross a joint or suppress real motion, keep it phase-specific or regenerate the source.
+
+In native construction, shared cels originate from one reviewed master and connect through explicitly authored joints. Clear old idle hands/cuffs/limbs with full erase footprints and repaint exposed garment. Inspect far/near limb visibility and layer order at every phase; unchanged pixels can still hide a limb or preserve an extra idle hand. This construction does not authorize broad overlays on independently generated anatomy.
 
 ## Local Feature Record
 
@@ -77,10 +79,10 @@ Use phase-specific families for articulated or deforming features, for example `
 
 ## Review and Patch Loop
 
-1. Generate each complete high-detail frame separately.
-2. Inspect each full frame and local anatomy at native high resolution. Reject malformed anatomy before pixelization.
-3. Convert approved frames separately to pseudo-pixel sources and inspect those sources at native resolution.
-4. Recover through the declared integer-grid policy. Prefer a shared lattice; otherwise record each frame's selected refined grid. Do not resample after recovery.
+1. For generated work, generate each complete high-detail frame separately and inspect full/local anatomy before pixelization.
+2. Convert approved generated frames separately to pseudo-pixel sources and inspect them at native resolution.
+3. Recover generated sources through the declared integer-grid policy. Prefer a shared lattice; otherwise record each frame's selected refined grid. Do not resample after recovery.
+4. For native work instead, review the same-view master, then author shared cels and phase-specific geometry with declared joints, erase masks, body offsets, and layers. Generation and recovery stages are not applicable.
 5. Run `scripts/pixel_region_workbench.py review` to produce individual magnified local windows and exact differences against the approved reference.
 6. The agent selects the feature class, canonical or phase-family reference, target anchor, transparent erase footprint, context ring, and allowed discrete transform.
 7. Run `extract` and `apply` for exact, stale-safe RGBA replacement. The script never chooses the feature or placement.
@@ -91,8 +93,9 @@ Use phase-specific families for articulated or deforming features, for example `
 
 - `technical-pass`: hard file, lattice, palette, Alpha, anchor, hash, bounds, resampling, and deterministic checks passed.
 - `diagnostic-warn`: a visual measurement such as paired cadence lies outside its reference range; it requires explicit normal/slow loop review but does not itself prove a defect.
-- `awaiting-visual-review`: magnified artifacts exist, but the agent has not completed all high-detail, pseudo-pixel, logical-frame, and loop reviews.
+- `awaiting-visual-review`: magnified artifacts exist, but the agent has not completed all applicable source, logical-frame, and normal/slow playback reviews.
 - `visual-fail`: any semantic anatomy, feature, connection, occlusion, or pixel-cluster defect remains.
 - `pass`: hard technical checks and explicit magnified visual review passed for every frame and the loop, with every diagnostic warning explicitly acknowledged.
+- `candidate-with-warnings`: explicit visual review permits a coherent candidate while recording specific remaining motion or articulation limits; stable identity alone does not imply natural motion.
 
-Never report `technical-pass` or `diagnostic-warn` alone as an approved animation. Direct user approval governs subjective motion feel, but cannot waive a hard integrity failure.
+Never report `technical-pass` or `diagnostic-warn` alone as an approved animation. Direct user approval governs subjective motion feel, but cannot waive a hard integrity failure. Record the scope of the user decision: approval to preserve a better version does not grant perfect-motion or engine-integration approval.
