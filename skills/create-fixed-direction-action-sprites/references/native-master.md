@@ -12,6 +12,8 @@ Use this route for already approved logical pixels that can support the intended
 6. Draw integer joint geometry and phase-specific silhouettes. Declare far/near ordering from the view; review overlaps rather than assuming one universal layer stack. A torso can accidentally hide a far arm, and a near contact leg can hide the swing boot. Check visibility throughout the sequence.
 7. Inspect every completed frame and normal/slow playback. Shared head/torso shape improves identity consistency but can still produce stiff weight transfer, limited cloth response, or weak action readability. Record these as specific warnings or repair them.
 
+For component design, attachment and local repair, follow [component-construction.md](component-construction.md). Keep design constraints separate from phase geometry, choose each component's actual body/joint/contact anchor, and clear superseded pixels within its construction layer before merging. The native packager's `stable_regions` assertion follows the master plus `body_offset`; use a separate exact placement check for independently anchored parts such as planted feet.
+
 A shared cel is part of a reviewed construction from a common master. It is not permission to splice a broad rectangle across the neck, shoulder, waist, or hip of an independently generated body. Native articulation requires drawing the connecting geometry, not inferring it automatically from image components.
 
 ## Packaging Contract
