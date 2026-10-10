@@ -1,5 +1,11 @@
 # Methodology: reasoning on a discrete sprite
 
+**Current routing (2026-10-10):** static eight-direction portraits retain the
+spatial Skill; new action frames are generated through PixelLab API. See
+[current action routing](pixellab-actions.md). The native/generated temporal
+methods below document the provenance of the retained publication and are
+retired as production routes.
+
 ## 1. The representation matters
 
 A logical sprite is not a low-resolution photograph. It is an exact `width × height × 4` RGBA field. Two neighboring cells may have identical colors or an abrupt discontinuity, and a transparent cell can be just as important as an opaque one because it erases the previous silhouette.

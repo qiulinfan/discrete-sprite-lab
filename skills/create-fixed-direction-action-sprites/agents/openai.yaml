@@ -1,4 +1,4 @@
 interface:
-  display_name: "Create Fixed-Direction Action Sprites"
-  short_description: "Create native or generated fixed-view pixel actions"
-  default_prompt: "Use $create-fixed-direction-action-sprites to choose native-master or generated-frame authoring for one fixed-view pixel action, declare anatomical anchors and semantic phases, preserve exact RGBA, and review every magnified frame plus normal and slow playback."
+  display_name: "PixelLab Action Sprites"
+  short_description: "Generate pixel actions with the PixelLab API"
+  default_prompt: "Use $create-fixed-direction-action-sprites to animate approved directional character references through PixelLab within the authorized budget, preserve raw native pixels, and review individual frames plus normal and slow playback."
