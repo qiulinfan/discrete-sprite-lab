@@ -1,9 +1,10 @@
 # Reproducibility and provenance
 
-Current actions use procedural motion or authored keys plus PixelLab inbetweens; see
-[current routing and validation](pixellab-actions.md). The deterministic
-operations below describe the historical art pack. Retired temporal processors
-are recoverable through history/owner archive, not active Skill commands.
+Current actions use authored poses and procedural animation; see
+[the current workflow and validation](action-workflow.md). Historical model
+experiments correspond to product commit `ad3249b42aa874350362dcf9c6204215ef50f0c2`.
+Their recorded images remain preserved; retired transport code is not part of
+the current Skill. The operations below describe the historical art pack.
 
 ## What is reproducible
 

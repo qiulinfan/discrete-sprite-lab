@@ -1,135 +1,77 @@
 ---
 name: create-fixed-direction-action-sprites
-description: Create fixed-direction pixel character actions with procedural motion for small movements, deliberately authored action keyframes for large pose changes, and PixelLab endpoint-guided inbetweens. Use for locomotion, attacks, tools, damage or full directional action packs with preserved keys, shared cost limits and visual review. Static eight-direction portraits belong to create-topdown-8dir-sprites.
+description: Create fixed-direction pixel character actions from authored poses and procedural animation, with controlled inbetweens, exact source preservation and visual review. Use for locomotion, attacks, tools, damage or directional action packs. Static eight-direction portraits belong to create-topdown-8dir-sprites.
 ---
 
-# Fixed-Direction Hybrid Action Sprites
+# Procedural and Authored Action Sprites
 
-Choose the motion route by articulation, silhouette change and occlusion. Small
-motions can reuse the existing art procedurally; larger motions need deliberate
-same-direction key poses. PixelLab connects authored poses. Do not ask a single
-standing reference plus an action name to define the complete animation.
+Use authored poses and task-owned procedural controllers for character actions.
+Generative animation and model-based inbetweens, including PixelLab, are outside
+this workflow. ImageGen may author missing pose geometry, not temporal fills.
 
-Match explanations and handoffs to the user's language. Keep API fields,
+Match explanations and handoffs to the user's language. Keep commands,
 identifiers, filenames and raw errors unchanged.
 
-## Establish identity and motion
+## Plan identity, poses and timing
 
-Use an approved same-direction portrait as the identity authority for every
-requested view. Keep `create-topdown-8dir-sprites` unchanged: it owns spatial
-reference continuity, not this action controller. Never fill an opposite view
-by mirroring the entire raster or accumulate facing drift around the circle.
+Use the approved same-direction portrait as the identity authority. Keep
+`create-topdown-8dir-sprites` frozen. Maintain camera, handedness, costume and
+logical body scale across directions; do not obtain opposite views by mirroring
+the entire character raster. Check paired facings and left/right gait phases.
 
-Before generating anything, record canvas/body scale, direction order,
-reference family, Alpha/palette policy, pivot/PPU, action phases and event times,
-loop or one-shot, output destination, review scope and any API budget. Preserve
-native logical pixels; a larger transparent action canvas may accommodate tools
-without enlarging the character. Existing art stays intact in a separate version.
+Record native canvas, palette/reference family, Alpha, pivot/PPU, action phases,
+contacts or impacts, loop/one-shot, timing and destination. Choose frame counts
+from the motion. Play the deliberate keys first with useful holds and timing;
+extra frames must improve the action rather than meet an arbitrary count.
 
-Choose a route per action, not per character:
+A literal formula portrait may establish an idle entry. A loop begins at its
+planned contact phase, and a tool action may need a ready pose. Plan entry and
+loop separately while keeping the directional portrait as the identity source.
 
-- **Procedural:** breathing, light sway, small steps and brief recoil when the
-  existing same-view parts expose enough anatomy. Use explicit parts, anchors,
-  trajectories and occlusion order; keep rigid identity blocks intact. A
-  controller may render new discrete limb poses when its source/geometry is
-  recorded. Check contacts, closure and texture stability. If articulation
-  exposes missing surfaces or tears a joint, author the missing pose/part.
-- **Keyframed:** running with flight, wide strikes, overhead tools, casting,
-  throwing, fishing, falls and other substantial pose/occlusion changes.
-  Plan anticipation, extreme/impact and recovery before producing images. Use
-  ImageGen or suitable existing authored poses with the same-view identity
-  reference. Generate actual bent limbs, torso changes and grounded final
-  poses; rotating a standing cutout does not establish a fall.
+## Choose geometry before interpolation
 
-When a retained high-detail same-view mother exists, make it the primary identity
-and camera reference for new key geometry; use other action art only to explain
-phases. A small native reference alone can lose to a differently facing action
-study. Verify every cel, rather than inferring the whole row from its first pose.
+- With sufficient same-view parts, use a procedural controller. Record part
+  masks, joint anchors, parent relations, trajectories, contact constraints and
+  occlusion order. Interpolate positions/angles and render discrete pixel poses.
+  Large movements can also use this route when the geometry is available.
+- Missing surfaces, changed silhouettes or new overlaps require authored key
+  poses or part variants. Use approved existing art or generate the missing
+  same-direction geometry. Review it before converting to the retained family's
+  high-detail, pseudo-pixel and Perfect Pixel workflow where applicable.
+- For a flat key-pose sequence without a usable rig, use deliberate frame
+  timings and holds or author the missing poses. Do not crossfade PNGs, warp
+  the whole image, or claim that two endpoint images define an articulated rig.
 
-Key count follows the motion, not a fixed four-frame formula. Author enough
-phases that interpolation has no major action decision left to invent. For
-several directions, keep event semantics, handedness and gait half-cycles
-corresponding. Jointly approve the key poses before spending on their gaps.
+Keep stable same-view identity blocks intact. Render limb geometry or select
+reviewed part variants at native pixel scale; avoid arbitrary texture stretching
+or resampling. A controller can evaluate continuous motion parameters, then
+quantize placement on the pixel grid. Preserve foot contacts, controlled body
+motion and the tool path. Add transparent canvas room without scaling the body.
 
-## Produce and review keys
+For authored contact/extreme frames, place the exact source PNGs at their planned
+indices. Preserve source parts, controller code, parameters, poses and phase map.
+If interpolation reveals missing geometry or tears a joint, improve the sources
+or controller rather than invoking an animation model.
 
-For newly generated pixel keys, preserve high-detail sources, approved
-pseudo-pixel conversion and recorded Perfect Pixel recovery where that is the
-established family workflow. Recover each cel separately; never rescale its
-logical pixels afterwards. Use deliberate body/contact landmarks rather than a
-weapon's total bounding box. One carefully aligned key study can contain a
-small pose set only if each cel's identity, scale, complete silhouette and
-separation are reviewable; otherwise generate individual keys. Eight unrelated
-facings on one generation sheet are not a substitute for directional references.
+## Package and review
 
-Using the exact directional formula portrait at frame0 can establish an idle
-entry. Holding a tool or entering an attack can instead require a preparatory
-pose. When uncertain, compare these starts with the other keys and timing held
-constant; judge identity and entry motion. Do not silently add a tool into an
-empty hand or label a different pose the unchanged formula portrait.
-For a cyclic action, plan its first motion phase and wrap. A standing-formula
-entry can be a separate transition clip while preserving the cycle's contact
-phases. The formula remains the identity reference in both clips.
+Read [the offline action contract](references/action-contract.md).
+`scripts/action_sprites.py` prepares and packages a complete native sequence,
+including mixed procedural frames and exact authored keys. Its only commands
+are offline `prepare` and `assemble`; it does not generate poses itself.
 
-## Fill gaps and assemble
+Validate dimensions, transparent binary Alpha, source PNG equality, explicit
+palette gates, phase/order/timing, sprite-sheet placement and normal/slow APNGs.
+Use durations for held poses; declare intentional nonadjacent repeated poses.
+Keep digest locks and verification records in ignored evidence.
 
-Read [the hybrid contract](references/hybrid-contract.md) for preparation,
-shared budgeting and commands. `scripts/hybrid_actions.py` consumes native
-procedural frames or authored keys, computes only the missing time slots and
-submits PixelLab V3 jobs with **both** endpoint frames. Keep action/event names
-as metadata; describe only the local geometric transition in API prompts when
-action semantics cause unrequested turns or effects. This is endpoint-guided
-V3 generation, not a claim that the provider preserves either endpoint exactly.
-The final sequence always uses the original authored key PNGs at their planned
-indices, including loop closure; the provider's processed reference and all
-motion frames remain separately preserved.
+Inspect every final frame at native scale and a nearest-neighbor enlargement of
+at least1024px. Then inspect normal/slow playback, face/costume stability, joints,
+occlusion, foot planting, tool trajectory and wrap/one-shot ending. Corresponding
+directions need matching event semantics; equal frame indices alone do not prove
+alignment. Technical integrity is not visual approval or player feel acceptance.
 
-Name the actual endpoint/model in the handoff. Pilot a cardinal and an oblique
-transition, checking subject count, tool count, facing and unrequested effects.
-Very similar endpoint poses can behave differently from a recovery with a
-changed silhouette or tool side; key count alone is insufficient. A failed
-pilot blocks ordinary production batching. An explicitly requested full test
-may retain failed rows as negative results, clearly separated from approval.
-If an interpolation-specific endpoint is inaccessible, report that access
-result and keep conclusions about a V3 trial limited to V3.
-
-Use a current user-authorized task budget shared by every action and comparison.
-The ledger checks actual balance/debit and a conservative reservation before
-POST, caps attempts, persists before submission and resumes accepted IDs. A
-completed experiment's budget is closed. Ambiguous POSTs never retry blindly;
-transient GET failures leave the same job resumable. Do not buy a subscription
-or change providers to bypass access restrictions.
-
-PixelLab output is already native pixel art. Preserve its RGBA, Alpha, colors,
-placement and size. Do not recover a grid, paste a head, recolor, recenter or
-locally repaint the returned inbetweens. Revise the input keys/transition/model
-in a bounded new attempt when interpolation fails; add an authored major phase
-when the action itself is underspecified. Preserve prior failed results.
-
-The older `pixellab_actions.py` is a low-level transport/replay utility; live
-submission now also requires both endpoints. Its historical first-only recorded
-responses can be read offline but do not authorize new direct-action requests.
-Current model/access facts remain in
-[the API reference](references/pixellab-contract.md); consult the official
-schema before changing the backend.
-
-## Verify and deliver
-
-Check native dimensions/count, binary transparent Alpha, nonempty/bounded
-silhouettes, declared palette gates, exact authored-key and selected-provider
-PNG/RGBA equality, complete slot coverage, and normal/slow APNG timing/loop/final
-hold. Declared repeated holds/return poses are legitimate; unexpected duplicates
-stop for review. File integrity yields `awaiting-visual-review`, not approval.
-
-View every final frame at native scale and a nearest-neighbor enlargement of
-at least1024px. Inspect face, facing, costume, connected joints, props, contacts
-and silhouette changes, then the ordered normal/slow sequence, wrap or one-shot
-ending. Compare direction/event correspondence and check large actions really
-change pose. Record what was actually seen. A single sheet or metrics cannot
-stand in for playback or user feel acceptance.
-
-Deliver source/part/controller data, approved keys, preserved API results,
-selected frames, sheets, normal/slow previews, functional metadata, local cost
-and integrity evidence, and explicit visual findings. Keep hash inventories,
-run logs and receipts in Git-ignored evidence. Engine integration and playtest
-are separately authorized work.
+Deliver original keys/parts, controller and parameters, complete source frames,
+phase/timing metadata, sheets, previews and explicit visual findings. Research
+outputs belong in the lab's separate experimental workspace; engine integration
+is a separately scoped task. Preserve historical experimental images unchanged.

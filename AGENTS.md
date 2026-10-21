@@ -1,34 +1,31 @@
 # Discrete Sprite Lab agent guidance
 
-- Current production workflows: `skills/create-topdown-8dir-sprites` for static
-  character views, `skills/create-fixed-direction-action-sprites` for PixelLab
-  hybrid action animation. The latter routes small motions to procedural
-  controllers, large pose changes to deliberate same-view keys, and only
-  inbetweens to PixelLab. Keep its public invocation name.
+- Current workflows: `skills/create-topdown-8dir-sprites` for static character
+  views and `skills/create-fixed-direction-action-sprites` for authored poses
+  and procedural actions. Keep both public invocation names.
 - The owner froze the spatial Skill. Do not change its files, scripts, tests
   or behavior as action-work maintenance.
-- Current action entrypoint: `scripts/hybrid_actions.py` inside the action
-  Skill. Preserve original authored keys at their planned indices. PixelLab
-  live requests require both endpoints; never generate a full action from a
-  single standing reference. Preserve provider output without head patches,
-  recoloring, recentering or grid recovery. Procedural controllers and authored
-  keys have their own source/geometry records; API failures are not locally
-  repainted.
-- Keep credentials and machine-specific artifacts outside this public repo.
-  Use task-local contracts/output roots; no embedded bearer tokens.
-- The sibling `../discrete-sprite-lab-experiments/` is the local workspace for
-  full experimental images, intermediates, reports and API evidence. These are
-  Discrete Sprite Lab research materials, not Village_Rim production assets.
-  Keep selected published examples in `art-pack/` and `case-studies/`; new local
-  experiments belong in that external workspace, not the game's ArtSource.
-- Historical published art, source evidence and failure studies remain intact.
-  README examples describe that publication; active development commands and
-  current routing are here and in `docs/pixellab-actions.md`.
+- Choose procedural motion by available part geometry and occlusion, not only
+  movement size. Author missing poses/surfaces/part variants. Controllers own
+  interpolation, joint/contact constraints and discrete pixel rendering.
+- PixelLab action generation and generative inbetweens are retired. Do not
+  invoke them or keep an API fallback in the current Skill.
+- Current packaging entrypoint: `scripts/action_sprites.py` inside the action
+  Skill. It accepts complete native sequences and preserves source PNG bytes.
+  Controllers are task-owned; the packer does not infer a rig from flat images.
+- Preserve exact authored keys, body scale, phase semantics and intentional
+  timing. Review every enlarged frame plus normal/slow playback; integrity,
+  visual judgment, user feel and engine integration are separate decisions.
+- Full research images, intermediate outputs and reports belong in the sibling
+  `../discrete-sprite-lab-experiments/` workspace, not Village_Rim's game assets.
+  Keep selected published examples in `art-pack/` and `case-studies/`.
+- Historical published art and source evidence remain intact. Current routing
+  is in `docs/action-workflow.md`. Retired transport source is archived with its
+  exact source commit; it is not an active command or compatibility wrapper.
 - Preserve existing user work and licenses. No commit/push without the owner's
-  explicit request. Personal environment files stay ignored.
-- Verify changes with a Python/Pillow environment: Skill metadata validator,
-  `skills/create-fixed-direction-action-sprites/tests/test_pixellab_actions.py`,
-  `skills/create-fixed-direction-action-sprites/tests/test_hybrid_actions.py`,
-  and `scripts/verify_pack.py`. Do not spend credits to test maintenance when
-  recorded-response replay and synthetic transport fixtures suffice.
-- Match handoffs to the user's language; keep identifiers/API fields unchanged.
+  explicit request. Keep credentials and personal runtime configuration out of
+  Git; verification inventories and run logs stay in ignored local evidence.
+- Verify with a Python/Pillow environment: Skill metadata validator,
+  `skills/create-fixed-direction-action-sprites/tests/test_action_sprites.py`
+  and `scripts/verify_pack.py`. Maintenance uses offline fixtures, not paid jobs.
+- Match handoffs to the user's language; keep identifiers and raw errors unchanged.

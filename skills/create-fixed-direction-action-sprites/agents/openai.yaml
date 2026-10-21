@@ -1,4 +1,4 @@
 interface:
-  display_name: "Hybrid Pixel Action Sprites"
-  short_description: "Author action keys, animate small motions, fill gaps"
-  default_prompt: "Use $create-fixed-direction-action-sprites to route small motions to procedural animation, author deliberate same-direction keys for large actions, fill only their gaps through PixelLab within one task budget, preserve original keys and provider pixels, and review all frames plus normal and slow playback."
+  display_name: "Procedural Pixel Action Sprites"
+  short_description: "Author poses and animate pixel characters procedurally"
+  default_prompt: "Use $create-fixed-direction-action-sprites to plan directional action poses and timing, animate known parts with a procedural controller, author missing geometry, preserve exact keys, and package and review the complete native sequence offline."
