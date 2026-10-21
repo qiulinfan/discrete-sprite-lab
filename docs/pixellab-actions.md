@@ -1,43 +1,45 @@
 # Current character and action routing
 
-On 2026-10-10 the owner chose PixelLab API for the complete animation workflow.
-`create-topdown-8dir-sprites` stays unchanged for static reference views.
-`create-fixed-direction-action-sprites` keeps its public invocation name, with
-new PixelLab instructions/client, lossless packaging, budget/async handling and
-visual review. Its previous native-cel and separately generated ImageGen action
-routes, scripts, repair tools and tests are retired from the active Skill.
+`create-topdown-8dir-sprites` remains frozen for character reference views.
+`create-fixed-direction-action-sprites` is the hybrid temporal workflow:
 
-Flow: approved directional references → contract/budget → PixelLab native
-animation per direction → preserve raw responses/frames → exact packaging →
-individual magnified frames and normal/slow sequences → hash-bound review →
-separately scoped engine integration. Requested views share a canvas/timer;
-semantic gait/event alignment must be reviewed rather than inferred by index.
+- Small motions use a task-owned procedural controller and same-view source parts.
+- Large silhouette, articulation or occlusion changes use deliberate action keys.
+- PixelLab fills the gaps between two specified keys. It does not design a whole
+  action from one standing image. Original keys remain exact in the final output.
 
-Instructions and contract:
-[PixelLab action Skill](../skills/create-fixed-direction-action-sprites/SKILL.md),
-[API/artifact contract](../skills/create-fixed-direction-action-sprites/references/pixellab-contract.md).
-The old public art and failure studies describe how earlier assets were made;
-their native pixels and historical evidence are unchanged. That provenance
-does not authorize invoking retired production code.
+Plan phases/events before choosing frame counts. Preserve identity, handedness,
+body scale and camera through all directions. A larger transparent canvas can
+accommodate tools without enlarging logical character pixels. Compare a formula
+portrait entry against a tool-ready entry when the distinction affects motion.
 
-The retained entry name avoids breaking public Skill references and the frozen
-spatial Skill's links. No legacy code or provider fallback remains behind it.
-The archived implementation is recoverable in the owner's private archive,
-with source commit and per-file hashes; Git also retains published history.
+The production entrypoint is
+[`hybrid_actions.py`](../skills/create-fixed-direction-action-sprites/scripts/hybrid_actions.py).
+See the [Skill](../skills/create-fixed-direction-action-sprites/SKILL.md) and
+[hybrid contract](../skills/create-fixed-direction-action-sprites/references/hybrid-contract.md).
+All actions and A/B samples in a task share one user-authorized budget ledger.
+Accepted IDs resume; ambiguous POSTs never retry blindly. Close finished budgets.
 
-Current checks (existing Python/Pillow environment):
+The V3 transport supplies first/last guides; provider pixels need not equal the
+keys. Preserve all raw responses, then select only interior frames. The final
+assembler copies authored keys byte-for-byte at their indices and packages
+selected provider PNGs unchanged. No pasted heads, recoloring, grid recovery or
+recentering is performed on native API results. High-detail/pseudo-pixel/grid
+recovery applies to newly authored keys, not their returned inbetweens.
+
+Historical published packs and failure studies retain their original provenance.
+The low-level `pixellab_actions.py` can replay those recordings offline; live
+submission requires both endpoints. Replaying an old first-only request does not
+claim that the new hybrid route generated that art.
+
+Checks use an existing Python/Pillow environment:
 
 ```sh
+python3 -B skills/create-fixed-direction-action-sprites/tests/test_hybrid_actions.py
 python3 -B skills/create-fixed-direction-action-sprites/tests/test_pixellab_actions.py
 python3 -B scripts/verify_pack.py
 ```
 
-The helper's offline `replay` accepts preserved API requests/results and checks
-their reference hashes. Replay labels are explicit; it cannot issue live jobs
-or claim that a new prompt generated old frames. Maintenance validation does
-not consume credits. Optional `balance` is read-only.
-
-V3 is the default tested API model. Other PixelLab models require current
-schema/cost/access checks and remain PixelLab-only. Avoid automatic upgrades,
-new subscriptions or reusing completed-task budgets. Actual USD debit, trial
-generations and returned paid-equivalent estimates are separate quantities.
+Maintenance tests use synthetic transport/PNG fixtures and do not spend credits.
+Integrity, per-frame/normal/slow visual review, user feel and engine integration
+remain separate. Never present unviewed frames or failed API jobs as approved.

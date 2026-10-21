@@ -1,6 +1,6 @@
 # Reproducibility and provenance
 
-Current action generation uses PixelLab API; see
+Current actions use procedural motion or authored keys plus PixelLab inbetweens; see
 [current routing and validation](pixellab-actions.md). The deterministic
 operations below describe the historical art pack. Retired temporal processors
 are recoverable through history/owner archive, not active Skill commands.

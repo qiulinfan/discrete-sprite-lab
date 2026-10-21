@@ -1,7 +1,7 @@
 # Methodology: reasoning on a discrete sprite
 
 **Current routing (2026-10-10):** static eight-direction portraits retain the
-spatial Skill; new action frames are generated through PixelLab API. See
+spatial Skill; new actions use procedural motion or authored key poses with PixelLab inbetweens. See
 [current action routing](pixellab-actions.md). The native/generated temporal
 methods below document the provenance of the retained publication and are
 retired as production routes.

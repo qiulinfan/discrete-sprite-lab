@@ -247,7 +247,9 @@ def submit(root, api, direction):
     root = Path(root)
     state, contract = load(root / "state.json"), load(root / "contract.json")
     require(state["transport"] == "live-api", "Replay outputs cannot submit jobs")
-    body = payload_for(root, direction_record(contract, direction))
+    item = direction_record(contract, direction)
+    require(item.get("last_frame"), "New PixelLab jobs are inbetween-only: provide both authored endpoint frames")
+    body = payload_for(root, item)
     current, ledger = refresh_cost(root, api)
     check_budget(contract, state, current, ledger)
     job = {"direction": direction, "attempt": 1 + sum(j["direction"] == direction for j in state["jobs"]), "status": "post-uncertain", "submitted_at": now()}

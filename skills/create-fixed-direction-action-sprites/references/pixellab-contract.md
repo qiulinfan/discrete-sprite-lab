@@ -1,10 +1,14 @@
-# PixelLab V3 API and artifact contract
+# PixelLab V3 transport reference
 
 Verified against official V2 OpenAPI and the 2026-10-10 64px walking experiment.
 Consult [current schemas](https://api.pixellab.ai/v2/docs) and
 [estimated prices](https://www.pixellab.ai/pixellab-api) before changing models.
 The official service is `https://api.pixellab.ai/v2`; bearer credentials are
 loaded separately from a user file, never serialized in a contract or output.
+
+This document describes the lower-level transport and historical replay format.
+Use [hybrid-contract.md](hybrid-contract.md) for new action plans; all live jobs
+require both authored endpoints and only fill their interior time slots.
 
 ## API facts
 
@@ -51,8 +55,8 @@ Keep both contracts and outputs outside the installed Skill.
   "no_background": true,
   "enhance_prompt": false,
   "directions": [
-    { "direction": "south", "reference": "references/south.png" },
-    { "direction": "east", "reference": "references/east.png" }
+    { "direction": "south", "reference": "references/south-start.png", "last_frame": "references/south-end.png" },
+    { "direction": "east", "reference": "references/east-start.png", "last_frame": "references/east-end.png" }
   ],
   "budget": { "usd": 1.0, "max_jobs": 4, "reserve_usd_per_job": 0.25 }
 }
@@ -67,8 +71,8 @@ reserve even when the provider may use trial generations.
 
 Directions: north, northeast, east, southeast, south, southwest, west,
 northwest. List requested directions in output row order. Optional direction
-`seed` overrides `seed_base + row`; optional same-size `last_frame` supplies
-a target pose. Timings/counts depend on the action; a walk example does not
+`seed` overrides `seed_base + row`; same-size `last_frame` is required for a new live job and supplies
+the other authored endpoint. Timings/counts depend on the action; a walk example does not
 define all attacks, tools or one-shots. `palette_max_colors: null` preserves
 model colors with no color-count cap; an integer is an exact whole-sheet gate.
 Color drift still requires visual inspection. There is no local recoloring.

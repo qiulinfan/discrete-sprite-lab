@@ -61,7 +61,7 @@ class PixelLabActionsTests(unittest.TestCase):
         draw=ImageDraw.Draw(image)
         draw.rectangle((24,12,39,52),fill=(100,60,30,255))
         image.save(self.home/"reference.png")
-        self.contract={"schema_version":1,"model":"v3","description":"fixture reference","action":"Walk in place.","directions":[{"direction":"south","reference":"reference.png"},{"direction":"east","reference":"reference.png"}],"image_size":[64,64],"frame_count":6,"frame_ms":120,"slow_multiplier":3,"loop":True,"pivot":[32,3],"ppu":"fixture family","palette_max_colors":None,"reference_policy":"prefixed","budget":{"usd":1,"max_jobs":4,"reserve_usd_per_job":0.25}}
+        self.contract={"schema_version":1,"model":"v3","description":"fixture reference","action":"Walk in place.","directions":[{"direction":"south","reference":"reference.png","last_frame":"reference.png"},{"direction":"east","reference":"reference.png","last_frame":"reference.png"}],"image_size":[64,64],"frame_count":6,"frame_ms":120,"slow_multiplier":3,"loop":True,"pivot":[32,3],"ppu":"fixture family","palette_max_colors":None,"reference_policy":"prefixed","budget":{"usd":1,"max_jobs":4,"reserve_usd_per_job":0.25}}
         self.path=self.home/"request.json"
         P.save(self.path,self.contract)
         self.api=FakeAPI()

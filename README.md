@@ -54,15 +54,19 @@ skills/         Codex Skills and deterministic pixel-processing scripts
 scripts/        Repository publication and verification helpers
 ```
 
+Full local experiments and intermediate outputs live in the sibling workspace
+`../discrete-sprite-lab-experiments/`. The directories above contain the selected
+publication; experimental materials are maintained separately from Village_Rim's
+game assets.
+
 ## Verify the publication
 
 Install [uv](https://docs.astral.sh/uv/) and run:
 
 ```sh
 uv run scripts/verify_pack.py
-uv run skills/create-fixed-direction-action-sprites/tests/test_v2_contract.py
-uv run skills/create-fixed-direction-action-sprites/tests/test_v3_visual_review.py
-uv run skills/create-fixed-direction-action-sprites/tests/test_pixel_region_workbench.py
+uv run skills/create-fixed-direction-action-sprites/tests/test_hybrid_actions.py
+uv run skills/create-fixed-direction-action-sprites/tests/test_pixellab_actions.py
 ```
 
 The verifier checks frame counts, `64×64` dimensions, binary Alpha, sheet dimensions, GIF phase counts, JSON parsing, publication-path hygiene, file size limits, local links, and symlink safety.
