@@ -15,6 +15,10 @@ Start by playing the key poses directly with deliberate timing. Add a
 procedural transition only when it improves a visible gap. Preserve impact,
 contact, anticipation and held poses; frame counts follow the motion. An image
 generator can author missing pose geometry, but does not supply temporal fills.
+The user chooses that generator: the agent's built-in image tool, or
+[`gemini_image.py`](../skills/create-fixed-direction-action-sprites/scripts/gemini_image.py)
+for the Nano Banana 2.1 API, whose offline `matte` also keys either source to
+binary Alpha.
 
 The offline helper
 [`action_sprites.py`](../skills/create-fixed-direction-action-sprites/scripts/action_sprites.py)
@@ -34,6 +38,7 @@ Validation, using an existing Python/Pillow environment:
 
 ```sh
 python3 -B skills/create-fixed-direction-action-sprites/tests/test_action_sprites.py
+python3 -B skills/create-fixed-direction-action-sprites/tests/test_gemini_image.py
 python3 -B scripts/verify_pack.py
 ```
 

@@ -66,6 +66,7 @@ Install [uv](https://docs.astral.sh/uv/) and run:
 ```sh
 uv run scripts/verify_pack.py
 uv run skills/create-fixed-direction-action-sprites/tests/test_action_sprites.py
+uv run skills/create-fixed-direction-action-sprites/tests/test_gemini_image.py
 ```
 
 The verifier checks frame counts, `64×64` dimensions, binary Alpha, sheet dimensions, GIF phase counts, JSON parsing, publication-path hygiene, file size limits, local links, and symlink safety.

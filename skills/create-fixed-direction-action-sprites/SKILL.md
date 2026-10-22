@@ -7,7 +7,8 @@ description: Create fixed-direction pixel character actions from authored poses 
 
 Use authored poses and task-owned procedural controllers for character actions.
 Generative animation and model-based inbetweens, including PixelLab, are outside
-this workflow. ImageGen may author missing pose geometry, not temporal fills.
+this workflow. An image generator may author missing pose geometry, never
+temporal fills.
 
 Match explanations and handoffs to the user's language. Keep commands,
 identifiers, filenames and raw errors unchanged.
@@ -36,7 +37,16 @@ loop separately while keeping the directional portrait as the identity source.
   Large movements can also use this route when the geometry is available.
 - Missing surfaces, changed silhouettes or new overlaps require authored key
   poses or part variants. Use approved existing art or generate the missing
-  same-direction geometry. Review it before converting to the retained family's
+  same-direction geometry. Before generating, ask the user which source to use
+  and do not choose for them: the current agent's built-in image generation tool
+  when it has one (for example Codex ImageGen), or the billable Nano Banana 2.1
+  API through this Skill's `scripts/gemini_image.py` (the user authorizes each
+  batch; see [hosted pose generation](references/hosted-pose-generation.md)).
+  Record the chosen source with the pose. Pass the approved portrait first as
+  the identity reference, then any landmark card or neighbouring key, and
+  request a flat chroma background; key it to binary Alpha with
+  `scripts/gemini_image.py matte` (offline) unless the source already has real
+  Alpha. Review the pose before converting it to the retained family's
   high-detail, pseudo-pixel and Perfect Pixel workflow where applicable.
 - For a flat key-pose sequence without a usable rig, use deliberate frame
   timings and holds or author the missing poses. Do not crossfade PNGs, warp

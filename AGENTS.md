@@ -13,6 +13,10 @@
 - Current packaging entrypoint: `scripts/action_sprites.py` inside the action
   Skill. It accepts complete native sequences and preserves source PNG bytes.
   Controllers are task-owned; the packer does not infer a rig from flat images.
+- Missing key poses come from the image source the user chooses: the agent's
+  built-in image tool or the action Skill's `scripts/gemini_image.py` (Nano
+  Banana 2.1 API). Ask; never choose for them. Generation authors geometry only;
+  inbetweens stay procedural.
 - Preserve exact authored keys, body scale, phase semantics and intentional
   timing. Review every enlarged frame plus normal/slow playback; integrity,
   visual judgment, user feel and engine integration are separate decisions.
@@ -26,6 +30,7 @@
   explicit request. Keep credentials and personal runtime configuration out of
   Git; verification inventories and run logs stay in ignored local evidence.
 - Verify with a Python/Pillow environment: Skill metadata validator,
-  `skills/create-fixed-direction-action-sprites/tests/test_action_sprites.py`
-  and `scripts/verify_pack.py`. Maintenance uses offline fixtures, not paid jobs.
+  `skills/create-fixed-direction-action-sprites/tests/test_action_sprites.py`,
+  `tests/test_gemini_image.py` (through `uv`) and `scripts/verify_pack.py`.
+  Maintenance uses offline fixtures, not paid jobs.
 - Match handoffs to the user's language; keep identifiers and raw errors unchanged.
